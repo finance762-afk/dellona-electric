@@ -94,10 +94,10 @@ function getAreaSlug(string $city): string {
     return slugify($city);
 }
 
-/** Public href for an area: its own page once built, else the overview anchor, else ''. */
+/** Public href for an area: its own /service-areas/<slug>/ page once built, else the hub anchor, else ''. */
 function areaHref(array $area): string {
-    $own = '/areas/' . $area['slug'] . '/';
-    if (is_dir(rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/') . '/areas/' . $area['slug']) && p1_page_exists($own)) return $own;
+    $own = '/service-areas/' . $area['slug'] . '/';
+    if (is_dir(rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/') . '/service-areas/' . $area['slug']) && p1_page_exists($own)) return $own;
     if (p1_page_exists('/service-areas/')) return '/service-areas/#' . $area['slug'];
     return '';
 }

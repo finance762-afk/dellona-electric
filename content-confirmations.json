@@ -698,6 +698,53 @@
           "where": "Accessibility section 5"
         }
       ]
+    },
+    {
+      "path": "/service-areas/",
+      "useful_because": "The service-area hub tells a customer exactly where Dellona Electric works without overstating it: the shop's real location (E8981 Briar Bluff Rd, in the Town of Dellona with a Reedsburg mailing address, about 6.5 miles east of downtown Reedsburg), the City of Reedsburg as the confirmed area with its own page, and a plain process for checking an address elsewhere in Sauk County. It carries the Google Maps listing embed and a directions link, which no other page pairs with the coverage explanation.",
+      "needs_confirmation": [
+        {
+          "fact": "Service radius and the specific towns served",
+          "question": "How far from your shop will you travel for a job, and which towns or areas do you want listed (for example Baraboo, Wisconsin Dells, Lake Delton, La Valle, Loganville, Rock Springs, Hillsboro)? Each confirmed town can get its own page.",
+          "where": "/service-areas/ area cards (only Reedsburg is listed until confirmed; build-plan target_radius 25 is not published)"
+        },
+        {
+          "fact": "Whether estimates are free",
+          "question": "Are your estimates free? If yes, the area pages can say \"Free Estimate\".",
+          "where": "/service-areas/ and /service-areas/reedsburg/ CTA headings (currently \"Request an Estimate\")"
+        }
+      ]
+    },
+    {
+      "path": "/service-areas/reedsburg/",
+      "useful_because": "The Reedsburg page gives a Reedsburg property owner local information the service pages don't have: the city's housing by age (13.3% built before 1940, 14.5% from 1940 to 1969, per American Community Survey estimates) mapped to the wiring each era usually has; the downtown Main Street and Park Street historic districts (buildings from 1873 to 1920); what to do with electrical equipment after the Baraboo River floods a basement, as it did in 2008 and 2018; who else is involved in a service upgrade (Reedsburg Utility Commission's meter upgrade application, City Building Inspection, or the Town of Reedsburg and Town of Dellona inspectors outside the city); and why zone 5a winters (−20 to −15 °F) make backup power worth planning. Sources are listed in the file header.",
+      "needs_confirmation": [
+        {
+          "fact": "Flood-damaged electrical work",
+          "question": "Do you take calls to inspect and replace flood- or water-damaged panels, outlets and wiring? The Reedsburg page explains what to do after a basement floods; we can say you handle this work if you do.",
+          "where": "/service-areas/reedsburg/ river section (describes the steps; no claim that you have done flood jobs)"
+        },
+        {
+          "fact": "Coordination with Reedsburg Utility Commission",
+          "question": "On service upgrades inside the city, do you file or help with Reedsburg Utility's New Construction / Meter Upgrade Application yourself?",
+          "where": "/service-areas/reedsburg/ \"who else is involved\" cards (currently says only that the utility takes the application)"
+        },
+        {
+          "fact": "Which utility serves rural addresses around Reedsburg",
+          "question": "Outside city limits, which utilities do your customers usually have (Alliant Energy, Adams-Columbia Electric Cooperative, other)? We couldn't confirm this from public sources.",
+          "where": "/service-areas/reedsburg/ flood steps (currently says \"your own utility outside the city\")"
+        },
+        {
+          "fact": "Real jobs in Reedsburg",
+          "question": "Are any of the photos from jobs inside the City of Reedsburg, or do you have Reedsburg job photos you'd like to add? The page currently makes no claim about past work in the city.",
+          "where": "/service-areas/reedsburg/ photos and captions"
+        }
+      ]
+    },
+    {
+      "path": "/blog/",
+      "useful_because": "A noindex \"coming soon\" placeholder (excluded from the sitemap) that points visitors to the four service pages that answer the most common questions until real articles are added from the design-portal Blogs tab. It carries the mid-page estimate band.",
+      "needs_confirmation": []
     }
   ],
   "consolidate": []

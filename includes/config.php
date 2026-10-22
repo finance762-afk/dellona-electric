@@ -194,7 +194,10 @@ $services = [
 /* ---------------------------------------------------------------------------
  * Service areas — build-plan service_areas holds Reedsburg only. The research
  *   brief's "nearby communities in Sauk County" is unverified — add a town here
- *   only after the client confirms it.
+ *   only after the client confirms it. Phase 6 (2026-10-22): the shop address
+ *   geocodes to the Town of Dellona (Census geocoder), ~6.6 mi ENE of downtown
+ *   Reedsburg; the Reedsburg mailing address is correct. Area pages live at
+ *   /service-areas/<slug>/ (areaHref() in functions.php).
  * ------------------------------------------------------------------------- */
 $serviceAreas = [
     ['name' => 'Reedsburg', 'slug' => 'reedsburg', 'zip' => '53959', 'county' => 'Sauk', 'primary' => true],

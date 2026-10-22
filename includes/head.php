@@ -7,6 +7,7 @@
  *   $pageType ('home'|'service'|'city'|'blog'|'about'|'faq'|'contact'|'other'), plus
  *   $serviceSlug / $citySlug where they apply
  * Optional: $ogImage (site-relative or absolute), $ogType, $noindex (true on thank-you),
+ *   $robotsMeta (full robots content override, e.g. 'noindex, follow' on the blog placeholder),
  *   $schemaMarkup (JSON string or array — page-specific JSON-LD, never FAQPage),
  *   $heroPreload = ['srcset' => '...-480.avif 480w, ...', 'sizes' => '100vw'],
  *   $headExtra (raw markup appended inside <head>).
@@ -102,6 +103,12 @@ if (!empty($schemaMarkup) && is_array($schemaMarkup)) {
     foreach ((array) $headPageNodes as $headNode) {
         if (!is_array($headNode)) continue;
         unset($headNode['@context']);
+        /* A page node carrying the sitewide #organization @id refines that entity
+         * (e.g. area pages narrow areaServed) instead of adding a second business node. */
+        if (($headNode['@id'] ?? '') === $headOrgId) {
+            $headGraph['@graph'][1] = array_replace($headGraph['@graph'][1], $headNode);
+            continue;
+        }
         $headGraph['@graph'][] = $headNode;
     }
     $schemaMarkup = '';
@@ -117,7 +124,7 @@ $headJsonFlags = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG;
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <?php endif; ?>
-<meta name="robots" content="<?php echo $noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'; ?>">
+<meta name="robots" content="<?php echo e($robotsMeta ?? ($noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large')); ?>">
 <meta name="theme-color" content="#f6f5f1">
 
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
