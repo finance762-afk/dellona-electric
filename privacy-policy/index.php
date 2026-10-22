@@ -22,8 +22,8 @@ $companyPhoneE164  = $phoneRaw;
 $companyAddress    = $address['street'] . ', ' . $address['city'] . ', ' . $address['state'] . ' ' . $address['zip'];
 $lastUpdated       = $legalUpdated;
 
-$pageTitle       = 'Privacy Policy | Dellona Electric, Reedsburg, WI';
-$pageDescription = 'How Dellona Electric in Reedsburg, WI collects, uses and protects information from its website, estimate forms, phone calls and text messages.';
+$pageTitle       = 'Privacy Policy | Dellona Electric Electrician, Reedsburg, WI';
+$pageDescription = 'How Dellona Electric in Reedsburg, WI collects, uses and protects data from its website, forms, calls and texts. Privacy questions? Call (608) 477-8453.';
 $canonicalUrl    = $siteUrl . '/privacy-policy/';
 $ogImage         = $ogImageDefault;
 $currentPage     = 'privacy-policy';

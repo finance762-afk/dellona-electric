@@ -9,8 +9,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * homepage and contact page promise — no response-time claim, which is unconfirmed),
  * phone CTA, links back to services, and the Google review request (design-system F5).
  * ------------------------------------------------------------------------- */
-$pageTitle       = 'Thank You | Dellona Electric, Reedsburg, WI';
-$pageDescription = 'Thanks for contacting Dellona Electric in Reedsburg, WI. Your request has been sent, and the company will call you back about your electrical job.';
+$pageTitle       = 'Thank You | Your Request Reached Dellona Electric, Reedsburg';
+$pageDescription = 'Thanks for contacting Dellona Electric in Reedsburg, WI. Your request has been sent, and we will call you back. Need help sooner? Call (608) 477-8453.';
 $canonicalUrl    = $siteUrl . '/thank-you';
 $currentPage     = 'thank-you';
 $pageType        = 'other';

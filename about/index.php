@@ -17,7 +17,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cta-band.php';
 
 $pageTitle       = 'About Dellona Electric | Electricians in Reedsburg, WI';
-$pageDescription = 'Meet Dellona Electric, the Reedsburg, WI electrical company owned by Edward Giannoni since 2018: who does the work, what to expect and the jobs behind the photos.';
+$pageDescription = 'Meet Dellona Electric, the Reedsburg, WI electrical company Edward Giannoni has run since 2018, and see the jobs behind the photos. Call (608) 477-8453.';
 $canonicalUrl    = $siteUrl . '/about/';
 $currentPage     = 'about';
 $pageType        = 'about';

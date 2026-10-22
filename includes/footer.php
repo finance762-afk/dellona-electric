@@ -80,7 +80,15 @@ foreach ([
         </div>
       </div>
     </div>
-    <p class="footer-entity"><strong><?php echo e($siteName); ?></strong> · <?php echo e($footAddressLine); ?> · <a href="<?php echo e($footPhoneHref); ?>"><?php echo e($phone); ?></a> · <?php echo e($email); ?>. Owner: <?php echo e($ownerName); ?>. Electrical repair, wiring, panel upgrades, lighting, EV charger and generator installation in <?php echo e($address['city']); ?> and the surrounding <?php echo e($serviceAreas[0]['county']); ?> County area.</p>
+    <?php /* AEO entity block (seo-aeo-2026 Part C): microdata itemid = the JSON-LD #organization
+           @id, so both describe one entity. NAP strings match the schema character-for-character. */ ?>
+    <p class="footer-entity" itemscope itemtype="https://schema.org/Electrician" itemid="<?php echo e(rtrim($siteUrl, '/') . '/#organization'); ?>">
+      <strong itemprop="name"><?php echo e($siteName); ?></strong> is an electrician based in
+      <?php if ($addressPublic): ?><span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress"><?php echo e($address['street']); ?></span>, <span itemprop="addressLocality"><?php echo e($address['city']); ?></span>, <span itemprop="addressRegion"><?php echo e($address['state']); ?></span> <span itemprop="postalCode"><?php echo e($address['zip']); ?></span></span><?php else: echo e($address['city'] . ', ' . $address['state']); endif; ?>,
+      serving <span itemprop="areaServed"><?php echo e($address['city']); ?> and the surrounding <?php echo e($serviceAreas[0]['county']); ?> County area</span>.
+      Founded in <span itemprop="foundingDate"><?php echo (int) $yearEstablished; ?></span> and owned by <?php echo e($ownerName); ?>, <?php echo e($siteName); ?> specializes in electrical repair, wiring and panel upgrades, plus lighting, EV charger and generator installation for homes, new construction and businesses.
+      Contact: <a href="<?php echo e($footPhoneHref); ?>"><span itemprop="telephone"><?php echo e($phone); ?></span></a> | <a href="mailto:<?php echo e($email); ?>"><span itemprop="email"><?php echo e($email); ?></span></a> | <a itemprop="url" href="<?php echo e(rtrim($siteUrl, '/') . '/'); ?>"><?php echo e($domain); ?></a>
+    </p>
   </div>
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">

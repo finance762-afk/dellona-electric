@@ -22,7 +22,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/service-helpers.php';
 $serviceSlug     = 'electrical-inspections';
 $svc             = p1_service_by_slug($serviceSlug);
 $pageTitle       = 'Home Electrical Inspections Reedsburg WI | Dellona Electric';
-$pageDescription = 'Home electrical inspections and maintenance in Reedsburg, WI: panel, wiring, outlets and alarms checked before you buy, remodel or add a load. Call (608) 477-8453.';
+$pageDescription = 'Home electrical inspections in Reedsburg, WI: the panel, wiring, outlets and alarms checked before you buy, remodel or add a load. Call (608) 477-8453 today.';
 $canonicalUrl    = $siteUrl . '/services/' . $serviceSlug . '/';
 $currentPage     = 'services';
 $pageType        = 'service';

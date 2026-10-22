@@ -267,7 +267,7 @@ function p1_full_lead_form(string $formId, string $prefix, string $submitLabel =
     </label>
     <label class="form-consent-item form-consent-required" for="<?php echo $p; ?>-terms">
       <input id="<?php echo $p; ?>-terms" type="checkbox" name="terms_accepted" value="yes" class="consent-checkbox" required>
-      <span class="consent-label">I have read and agree to the <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms/">Terms of Service</a>. <span class="required-star">*</span></span>
+      <span class="consent-label">I have read and agree to the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a>. <span class="required-star">*</span></span>
     </label>
   </fieldset>
   <button type="submit" class="btn btn-primary btn-lg btn-block"><?php echo e($submitLabel); ?></button>

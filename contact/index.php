@@ -13,7 +13,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * prompt. Business hours are not in intake — the page says to call, never invents hours.
  * ------------------------------------------------------------------------- */
 $pageTitle       = 'Contact Dellona Electric | Electrician in Reedsburg, WI';
-$pageDescription = 'Contact Dellona Electric in Reedsburg, WI: call (608) 477-8453, email dellonaelectric@outlook.com or send the form to request an electrical estimate.';
+$pageDescription = 'Contact Dellona Electric in Reedsburg, WI: call (608) 477-8453, email dellonaelectric@outlook.com or send the form below to request an electrical estimate.';
 $canonicalUrl    = $siteUrl . '/contact/';
 $currentPage     = 'contact';
 $pageType        = 'contact';

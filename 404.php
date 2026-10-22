@@ -11,7 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * ------------------------------------------------------------------------- */
 http_response_code(404);
 
-$pageTitle       = 'Page Not Found | Dellona Electric, Reedsburg, WI';
+$pageTitle       = 'Page Not Found | Dellona Electric Electrician, Reedsburg, WI';
 $pageDescription = 'That page is not on the Dellona Electric site. Search the electrical services, or call (608) 477-8453 to reach the Reedsburg, WI electrician directly.';
 $canonicalUrl    = $siteUrl . '/404';
 $currentPage     = '404';

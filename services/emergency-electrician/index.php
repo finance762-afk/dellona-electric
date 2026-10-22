@@ -21,7 +21,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/service-helpers.php';
 $serviceSlug     = 'emergency-electrician';
 $svc             = p1_service_by_slug($serviceSlug);
 $pageTitle       = 'Emergency Electrical Repair Reedsburg WI | Dellona Electric';
-$pageDescription = 'Sparks, a burning smell or half the house dark in Reedsburg, WI? See what to do first, then call Dellona Electric at (608) 477-8453 for emergency electrical repair.';
+$pageDescription = 'Sparks, a burning smell or half the house dark in Reedsburg, WI? See what to do first, then call Dellona Electric at (608) 477-8453 for emergency repair.';
 $canonicalUrl    = $siteUrl . '/services/' . $serviceSlug . '/';
 $currentPage     = 'services';
 $pageType        = 'service';

@@ -23,7 +23,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/service-helpers.php';
 $serviceSlug     = 'commercial-electrical';
 $svc             = p1_service_by_slug($serviceSlug);
 $pageTitle       = 'Commercial Electrical Reedsburg WI | Dellona Electric';
-$pageDescription = 'Commercial electrical repair, lighting and upgrades for restaurants, shops, offices and light industrial space in Reedsburg, WI. Call Dellona Electric at (608) 477-8453.';
+$pageDescription = 'Commercial electrical repair, lighting and upgrades for restaurants, shops and offices in Reedsburg, WI. Call Dellona Electric at (608) 477-8453 to plan yours.';
 $canonicalUrl    = $siteUrl . '/services/' . $serviceSlug . '/';
 $currentPage     = 'services';
 $pageType        = 'service';

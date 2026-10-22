@@ -265,7 +265,7 @@ $licenseLabel = '';
  * CSS cache-bust — SINGLE source of truth. Pages MUST NOT set their own.
  * Bump this on every framework.css change.
  * ------------------------------------------------------------------------- */
-$cssVersion = '2';
+$cssVersion = '3';
 
 /* ---------------------------------------------------------------------------
  * Forms — Page One leads endpoint (build-plan form_action, verbatim)

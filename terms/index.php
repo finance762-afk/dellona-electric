@@ -25,7 +25,7 @@ $companyAddress    = $address['street'] . ', ' . $address['city'] . ', ' . $addr
 $lastUpdated       = $legalUpdated;
 
 $pageTitle       = 'Terms of Service | Dellona Electric, Reedsburg, WI';
-$pageDescription = 'Terms of Service for the Dellona Electric website and electrical work in Reedsburg, WI: estimates, written agreements, payment, cancellation and Wisconsin law.';
+$pageDescription = 'Terms of Service for the Dellona Electric website and work in Reedsburg, WI: estimates, payment, cancellation and Wisconsin law. Questions? Call (608) 477-8453.';
 $canonicalUrl    = $siteUrl . '/terms/';
 $ogImage         = $ogImageDefault;
 $currentPage     = 'terms';

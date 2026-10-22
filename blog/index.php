@@ -12,7 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cta-band.php';
 
 $pageTitle       = 'Electrical Tips Blog, Coming Soon | Dellona Electric';
-$pageDescription = 'Dellona Electric in Reedsburg, WI is preparing articles on home wiring, panels, generators and EV chargers. Call (608) 477-8453 with questions now.';
+$pageDescription = 'Dellona Electric in Reedsburg, WI is preparing articles on home wiring, panels, generators and EV chargers. Call (608) 477-8453 with your questions now.';
 $canonicalUrl    = $siteUrl . '/blog/';
 $currentPage     = 'blog';
 $pageType        = 'blog';

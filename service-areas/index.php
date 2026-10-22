@@ -17,7 +17,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/service-helpers.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/area-helpers.php';
 
-$pageTitle       = 'Electrician Service Area: Reedsburg & Sauk County | Dellona Electric';
+$pageTitle       = 'Electrician Service Area: Reedsburg, WI | Dellona Electric';
 $pageDescription = 'Where Dellona Electric works: electrical repair in Reedsburg, WI and the surrounding Sauk County area, from a shop on Briar Bluff Rd. Call (608) 477-8453.';
 $canonicalUrl    = $siteUrl . '/service-areas/';
 $currentPage     = 'service-areas';

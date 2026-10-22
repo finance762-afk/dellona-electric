@@ -12,7 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
  * and listed in /content-confirmations.json.
  * ------------------------------------------------------------------------- */
 $pageTitle       = 'Dellona Electric | Electrical Repair in Reedsburg, WI';
-$pageDescription = 'Dellona Electric handles electrical repair, panel upgrades, lighting, EV chargers and standby generators for homes and businesses in Reedsburg, WI since 2018.';
+$pageDescription = 'Dellona Electric handles electrical repair, panel upgrades, lighting, EV chargers and generators in Reedsburg, WI since 2018. Call (608) 477-8453 today.';
 $canonicalUrl    = $siteUrl . '/';
 $ogImage         = $ogImageDefault;
 $currentPage     = 'home';
@@ -310,7 +310,7 @@ $homeServicesHub = p1_page_exists('/services/');
         <div class="hero-text">
           <span class="eyebrow"><?php echo e($address['city']); ?>, <?php echo e($address['state']); ?> · <?php echo e($serviceAreas[0]['county']); ?> County</span>
           <h1 class="hero-title" id="hero-title">Electrical repair services in <span class="text-accent"><?php echo e($address['city']); ?>, <?php echo e($address['state']); ?></span></h1>
-          <p class="hero-answer"><?php echo e($siteName); ?> handles repairs, panels, lighting, EV chargers and generators.</p>
+          <p class="hero-answer"><?php echo e($siteName); ?> has handled electrical repair in <?php echo e($address['city'] . ', ' . $address['state']); ?> since <?php echo (int) $yearEstablished; ?>: dead circuits and tripping breakers, faulty wiring and panel upgrades, indoor and outdoor lighting, EV chargers, standby generators and new-construction wiring for homes and businesses across the Sauk County area.</p>
           <div class="hero-actions">
             <button type="button" class="btn btn-primary btn-lg hero-form-open" data-open-estimate><?php echo e($estimateCtaLabel); ?></button>
             <a class="link-call" href="<?php echo e($homePhoneHref); ?>"><?php echo icon('phone', 18); ?> or call <?php echo e($phone); ?></a>

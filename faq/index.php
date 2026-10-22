@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cta-band.php';
 
 $pageTitle       = 'Electrician FAQ for Reedsburg, WI | Dellona Electric';
-$pageDescription = 'Answers from Dellona Electric in Reedsburg, WI on service area, EV chargers, generators, panel upgrades, permits, pricing and what happens after you call.';
+$pageDescription = 'Dellona Electric answers Reedsburg, WI questions on EV chargers, generators, panel upgrades, permits and pricing. Have one we missed? Call (608) 477-8453.';
 $canonicalUrl    = $siteUrl . '/faq/';
 $currentPage     = 'faq';
 $pageType        = 'faq';

@@ -21,7 +21,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/service-helpers.php';
 $serviceSlug     = 'new-construction-wiring';
 $svc             = p1_service_by_slug($serviceSlug);
 $pageTitle       = 'New Construction Wiring Reedsburg WI | Dellona Electric';
-$pageDescription = 'New construction electrical wiring for homes, additions, garages and outbuildings in Reedsburg, WI, from rough-in to final. Call Dellona Electric at (608) 477-8453.';
+$pageDescription = 'New construction wiring for homes, additions, garages and outbuildings in Reedsburg, WI, from rough-in to final. Call Dellona Electric at (608) 477-8453.';
 $canonicalUrl    = $siteUrl . '/services/' . $serviceSlug . '/';
 $currentPage     = 'services';
 $pageType        = 'service';

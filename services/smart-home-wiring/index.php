@@ -21,7 +21,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/service-helpers.php';
 
 $serviceSlug     = 'smart-home-wiring';
 $svc             = p1_service_by_slug($serviceSlug);
-$pageTitle       = 'Smart Home Wiring Reedsburg WI | Dellona Electric';
+$pageTitle       = 'Smart Home Wiring in Reedsburg, WI | Dellona Electric';
 $pageDescription = 'Smart home wiring in Reedsburg, WI from Dellona Electric: smart switches and dimmers, video doorbells, thermostats and hidden TV power. Call (608) 477-8453.';
 $canonicalUrl    = $siteUrl . '/services/' . $serviceSlug . '/';
 $currentPage     = 'services';

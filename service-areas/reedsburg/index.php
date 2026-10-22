@@ -50,8 +50,8 @@ $area = [
     'sameAs' => 'https://en.wikipedia.org/wiki/Reedsburg,_Wisconsin',
 ];
 $citySlug        = $area['slug'];
-$pageTitle       = 'Electrician in Reedsburg, WI | Electrical Repair | Dellona Electric';
-$pageDescription = 'Electrical repair in Reedsburg, WI: older-home wiring, panel upgrades with Reedsburg Utility, flood-damaged circuits and standby generators. Call (608) 477-8453.';
+$pageTitle       = 'Electrician in Reedsburg, WI | Electrical Repair | Dellona';
+$pageDescription = 'Electrical repair in Reedsburg, WI: older-home wiring, panel upgrades with Reedsburg Utility, flood-damaged circuits and generators. Call (608) 477-8453.';
 $canonicalUrl    = $siteUrl . '/service-areas/' . $area['slug'] . '/';
 $currentPage     = 'service-areas';
 $pageType        = 'city';

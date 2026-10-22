@@ -12,7 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/functions.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/service-helpers.php';
 
 $pageTitle       = 'Electrical Services in Reedsburg, WI | Dellona Electric';
-$pageDescription = 'All 15 electrical services from Dellona Electric in Reedsburg, WI: repairs, panels, wiring, lighting, EV chargers, generators and new builds. Call (608) 477-8453.';
+$pageDescription = 'All 15 Dellona Electric services in Reedsburg, WI: repairs, panels, wiring, lighting, EV chargers, generators and new builds. Call (608) 477-8453 today.';
 $canonicalUrl    = $siteUrl . '/services/';
 $currentPage     = 'services';
 $pageType        = 'other';

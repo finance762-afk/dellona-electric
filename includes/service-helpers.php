@@ -129,7 +129,12 @@ function p1_service_schema(string $slug, string $pageTitle, string $pageDescript
         'areaServed'  => $areas,
         'mainEntityOfPage' => ['@id' => $canonicalUrl . '#webpage'],
     ];
-    if (!empty($svc['keywords'])) $service['alternateName'] = array_values(array_diff($svc['keywords'], [$service['serviceType']]));
+    /* Keywords are search phrases, not facts: drop availability/credential claims intake
+     * does not support (24/7, same-day, licensed, certified...) before they become schema. */
+    if (!empty($svc['keywords'])) $service['alternateName'] = array_values(array_filter(
+        array_diff($svc['keywords'], [$service['serviceType']]),
+        function ($kw) { return !preg_match('#24/7|same[- ]day|licen[cs]|certif|insured|affordable|best#i', $kw); }
+    ));
     if (empty($service['alternateName'])) unset($service['alternateName']);
     $webPage = generateWebPageSchema($pageTitle, $pageDescription, $canonicalUrl, '/assets/images/' . $heroImage . '.jpg');
     $webPage['speakable'] = ['@type' => 'SpeakableSpecification', 'cssSelector' => ['h1', '.hero-answer', '.answer-block']];

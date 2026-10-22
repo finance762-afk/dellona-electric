@@ -19,7 +19,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/service-helpers.php';
 
 $serviceSlug     = 'electrical-repair';
 $svc             = p1_service_by_slug($serviceSlug);
-$pageTitle       = 'Electrical Repair & Troubleshooting Reedsburg WI | Dellona Electric';
+$pageTitle       = 'Electrical Repair in Reedsburg, WI | Dellona Electric';
 $pageDescription = 'Electrical repair in Reedsburg, WI for dead circuits, short circuits, tripping breakers and flickering lights. Call Dellona Electric at (608) 477-8453.';
 $canonicalUrl    = $siteUrl . '/services/' . $serviceSlug . '/';
 $currentPage     = 'services';

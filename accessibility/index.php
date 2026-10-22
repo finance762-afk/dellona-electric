@@ -22,7 +22,7 @@ $companyAddress    = $address['street'] . ', ' . $address['city'] . ', ' . $addr
 $lastUpdated       = $legalUpdated;
 
 $pageTitle       = 'Accessibility Statement | Dellona Electric, Reedsburg, WI';
-$pageDescription = 'Dellona Electric\'s accessibility statement for its Reedsburg, WI website: WCAG 2.1 AA conformance, built-in features, known limits and how to report a barrier.';
+$pageDescription = 'Dellona Electric\'s WCAG 2.1 AA accessibility statement for its Reedsburg, WI website. Found a barrier on the site? Call (608) 477-8453 or email to report it.';
 $canonicalUrl    = $siteUrl . '/accessibility/';
 $ogImage         = $ogImageDefault;
 $currentPage     = 'accessibility';
