@@ -565,10 +565,50 @@ html.js-anim .in, html.js-anim .revealed, html.js-anim .animated { opacity: 1 !i
 html.js-anim .reveal-d1, html.js-anim .reveal-delay-1 { transition-delay: .08s } html.js-anim .reveal-d2, html.js-anim .reveal-delay-2 { transition-delay: .16s } html.js-anim .reveal-d3, html.js-anim .reveal-delay-3 { transition-delay: .24s } html.js-anim .reveal-delay-4 { transition-delay: .32s }
 .hero .reveal, .hero .reveal-up, .hero [data-animate], .hero-v7 .reveal { opacity: 1 !important; transform: none !important; } /* never hide above-the-fold */
 @view-transition { navigation: auto; }
+
+/* === Motion v8.1 (2026-10-22, owner-approved set — quiet, once, zero layout cost).
+   Everything here is pure CSS or already wired in main.js; pages add NO classes.
+   1. Hero photo drift: the hero image eases from 1.0 to 1.08 over ~28 s and back
+      (transform only — no LCP or CLS cost; the <picture> stays the LCP element).
+      Two <img> in .hero-bg (second one aria-hidden, loading="lazy") crossfade.
+   2. Hero entrance: eyebrow → h1 → answer → actions → chips arrive 80 ms apart on
+      load; the form card / visual follows. Starts at opacity .02, not 0, so Chrome
+      still counts the h1 as painted for LCP on photo-less heroes.
+   3. Logo wipe: the header logo wipes in left→right on the HOME hero only
+      (raster logos cannot draw-on; a clip-path wipe reads the same at any size).
+   6. Mobile call button: one soft pulse the first time the sticky bar slides in
+      (main.js adds .pulse-once once, then removes it).
+   7. Service card depth: the photo scales 4 % while the card lifts, hover-capable
+      devices only. Reviews stars (google-reviews.php) and the before/after sweep
+      (before-after.php) carry their own motion. All of it stops under
+      prefers-reduced-motion. === */
+@keyframes hero-drift { from { transform: scale(1) translate3d(0, 0, 0); } to { transform: scale(1.08) translate3d(-1.2%, 1%, 0); } }
+@keyframes hero-crossfade { 0%, 42% { opacity: 0; } 50%, 92% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes hero-in { from { opacity: .02; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes hero-in-soft { from { opacity: .02; transform: translateY(10px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes logo-wipe { from { clip-path: inset(0 100% 0 0); opacity: .4; } to { clip-path: inset(0 0 0 0); opacity: 1; } }
+@keyframes cta-pulse { 0% { box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), .55); } 70% { box-shadow: 0 0 0 14px rgba(var(--color-primary-rgb), 0); } 100% { box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), 0); } }
+.hero--photo .hero-bg img, .hero-visual__img img, .photo-stack__main img, .hero-photo img { transform-origin: 55% 45%; animation: hero-drift 28s cubic-bezier(.4, 0, .6, 1) infinite alternate both; will-change: transform; }
+.hero--photo .hero-bg img + img, .hero--photo .hero-bg picture + img, .hero--photo .hero-bg picture + picture img { position: absolute; inset: 0; opacity: 0; animation: hero-drift 28s cubic-bezier(.4, 0, .6, 1) infinite alternate both, hero-crossfade 28s linear infinite; }
+.hero .hero-text > *, .hero-v7 .hero-text > *, .hero .hero-copy > * { animation: hero-in .55s var(--ease) both; }
+.hero .hero-text > :nth-child(2), .hero .hero-copy > :nth-child(2) { animation-delay: .08s; }
+.hero .hero-text > :nth-child(3), .hero .hero-copy > :nth-child(3) { animation-delay: .16s; }
+.hero .hero-text > :nth-child(4), .hero .hero-copy > :nth-child(4) { animation-delay: .24s; }
+.hero .hero-text > :nth-child(5), .hero .hero-copy > :nth-child(5) { animation-delay: .32s; }
+.hero .hero-text > :nth-child(n + 6), .hero .hero-copy > :nth-child(n + 6) { animation-delay: .4s; }
+.hero .hero-form-card, .hero .hero-visual, .hero .photo-stack, .hero .bento-grid { animation: hero-in-soft .7s var(--ease) .3s both; }
+.hero--interior .hero-text > *, .hero--interior .hero__content > *, .hero-interior .hero-text > * { animation-duration: .45s; }
+body:has(.hero:not(.hero--interior):not(.hero-interior):not(.hero--legal)) .site-header .site-logo img { animation: logo-wipe .75s var(--ease) .1s both; }
+.mobile-cta-bar.pulse-once .mobile-cta-bar__call, .mobile-cta.pulse-once .mobile-cta-bar__call { animation: cta-pulse 1.3s var(--ease) .45s 1 both; }
+.service-card__image img, .svc__photo img { transition: transform .6s var(--ease); transform-origin: 50% 50%; }
+@media (hover: hover) { .service-card-with-image:hover .service-card__image img, .svc:hover .svc__photo img, .service-card-with-image:focus-visible .service-card__image img { transform: scale(1.04); } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   html.js-anim .reveal, html.js-anim .reveal-up, html.js-anim .reveal-down, html.js-anim .reveal-left, html.js-anim .reveal-right, html.js-anim .reveal-scale, html.js-anim [data-animate] { opacity: 1; transform: none; }
   .ticker-track, .marquee-track, .floating-ring, .float-animate, .float-animate-slow { animation: none; }
+  .hero--photo .hero-bg img, .hero-visual__img img, .photo-stack__main img, .hero-photo img, .hero--photo .hero-bg img + img, .hero--photo .hero-bg picture + img, .site-header .site-logo img, .mobile-cta-bar.pulse-once .mobile-cta-bar__call, .mobile-cta.pulse-once .mobile-cta-bar__call { animation: none; opacity: 1; transform: none; clip-path: none; }
+  .hero--photo .hero-bg img + img, .hero--photo .hero-bg picture + img { display: none; }
+  .hero .hero-text > *, .hero .hero-copy > *, .hero .hero-form-card, .hero .hero-visual, .hero .photo-stack, .hero .bento-grid { animation: none; opacity: 1; transform: none; }
 }
 
 /* === Responsive spacing === */

@@ -72,6 +72,22 @@ Prefer **CSS scroll-driven animations** behind `@supports`, with the existing In
 
 Both paths respect `prefers-reduced-motion` (existing rule).
 
+### Motion v8.1 — the built-in set (2026-10-22, owner-approved)
+
+Every new build ships these from the scaffold; pages add nothing and must not re-implement them:
+
+| Where | What | Source |
+|---|---|---|
+| Hero photo | Slow drift 1.0→1.08 over ~28 s, alternate; two `<img>` in `.hero-bg` crossfade | `framework.css` `hero-drift` / `hero-crossfade` |
+| Hero text | eyebrow → h1 → answer → actions → chips stagger 80 ms apart on load (opacity starts at .02 so LCP still counts the h1); form card / visual follows | `framework.css` `hero-in` (keyframes inlined in critical.css) |
+| Header logo | Left→right wipe, home page only (`body:has(.hero:not(.hero--interior))`) | `framework.css` `logo-wipe` |
+| Google rating | Summary stars fill to the TRUE rating (4.7 = 4 full + 70 %) and pop in left→right once, when scrolled to | `includes/google-reviews.php` (`--rating`, `.is-in`) |
+| Before/after | One slow sweep 50→22→78→50 when first scrolled to; any touch cancels | `includes/before-after.php` |
+| Mobile call bar | Slides up after the hero; the call button pulses once the first time (`.pulse-once`) | `main.js` + `framework.css` `cta-pulse` |
+| Service cards | Photo scales 4 % on hover while the card lifts; hover-capable devices only | `framework.css` |
+
+Rules: transform/opacity/clip-path only (CLS stays 0), nothing loops in the viewport except the hero drift, every item has an explicit `prefers-reduced-motion` stop (the global `.01ms` rule alone would freeze the drift at its END state). Not allowed: particle backgrounds, cursor followers, typewriter headlines, animated gradients, parallax that moves text, auto-playing carousels, video heroes without owner sign-off.
+
 ---
 
 ## Part D — Fonts

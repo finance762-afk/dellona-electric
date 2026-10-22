@@ -551,6 +551,153 @@
           "where": "era timeline and comparison table"
         }
       ]
+    },
+    {
+      "path": "/about/",
+      "useful_because": "The About page is the only place that tells the company's story end to end: Edward Giannoni's ownership, the 2018 start in Reedsburg and the Briar Bluff Rd base, who a customer will actually see on site (the crew and lettered truck), what to expect from a job, and a photo timeline of the kinds of work the crew has done, from basement panels and a JuiceBox charger to a log-home Kohler generator and a restaurant bar. It also explains how to check any Wisconsin electrician's credential on the DSPS lookup and where Reedsburg permits are handled, which no other page covers.",
+      "needs_confirmation": [
+        {
+          "fact": "How the company started",
+          "question": "Edward, how did Dellona Electric get started in 2018, and how did you get into the trade? Did you found the company, or take it over?",
+          "where": "story section (written without an origin story)"
+        },
+        {
+          "fact": "Wisconsin license number(s) and insurance",
+          "question": "What are your Wisconsin electrical license or registration numbers (master/contractor), and can we say you are insured? We'd add them to the credentials section.",
+          "where": "credentials section — currently points visitors to the DSPS lookup and says to ask for the number"
+        },
+        {
+          "fact": "Certifications, manufacturer programs and associations",
+          "question": "Are you a certified installer for any brands (e.g. Kohler or Generac generators, EV charger makers) or a member of any trade association? Please send profile links.",
+          "where": "credentials section"
+        },
+        {
+          "fact": "Crew size and names",
+          "question": "How many people are on the crew, and can we name the two crew members in the truck photo?",
+          "where": "team section caption and owner card"
+        },
+        {
+          "fact": "Dated milestones",
+          "question": "Any milestones with dates you'd like on the timeline (first hire, first commercial job, new truck/trailer, first generator install)? The middle of the timeline is currently organized by type of work, not by year.",
+          "where": "timeline"
+        },
+        {
+          "fact": "Job process and walkthrough",
+          "question": "Do you always check the panel and wiring before pricing, and walk the customer through finished work? The \"What can you expect\" cards say so, matching the homepage process.",
+          "where": "\"What can you expect\" value cards"
+        }
+      ]
+    },
+    {
+      "path": "/contact/",
+      "useful_because": "The Contact page gathers every way to reach Dellona Electric in one place: click-to-call, email, the Briar Bluff Rd address with a Google Maps embed and Get Directions link, the full estimate form with the service list and separate email/SMS/terms consent, what happens after the form is sent, and what to do first if something is sparking or smoking.",
+      "needs_confirmation": [
+        {
+          "fact": "Business hours",
+          "question": "What are your regular business hours? The contact page currently says to call to check availability.",
+          "where": "Hours row in the contact details card"
+        },
+        {
+          "fact": "Whether customers may stop by the Briar Bluff Rd address",
+          "question": "Is E8981 Briar Bluff Rd somewhere customers can visit, or should it be shown only as your base? The page currently asks people to call before stopping by.",
+          "where": "map section answer"
+        },
+        {
+          "fact": "Reply time for web requests",
+          "question": "How quickly do you usually call back after a form request?",
+          "where": "\"What happens after you send the form\" steps (no time stated)"
+        }
+      ]
+    },
+    {
+      "path": "/faq/",
+      "useful_because": "The FAQ answers 18 questions customers ask before calling, grouped into General, Services, Pricing and Process: the service area, EV chargers on a 240-volt circuit, generator transfer switches, panel-upgrade warning signs, what moves the price of a panel or charger job, what to put in an estimate request, Reedsburg permits, what to do about a tripping breaker or warm outlet, what counts as an emergency and who to call, and how to get ready for a visit. Each answer links to the service page that goes deeper.",
+      "needs_confirmation": [
+        {
+          "fact": "Licensed and insured",
+          "question": "Can we answer \"Are you licensed and insured?\" with your license number and insurance? The question is left off the FAQ until confirmed.",
+          "where": "FAQ (question omitted)"
+        },
+        {
+          "fact": "Emergency / after-hours availability",
+          "question": "Do you take after-hours or weekend emergency calls? The FAQ explains what counts as an emergency but makes no availability claim.",
+          "where": "FAQ \"What counts as an electrical emergency?\""
+        },
+        {
+          "fact": "Free estimates and service-call fees",
+          "question": "Are estimates free, and is there a trip or service-call fee? The pricing answers explain what affects price without quoting any number.",
+          "where": "FAQ pricing category"
+        },
+        {
+          "fact": "Financing and payment methods",
+          "question": "Which payment methods do you accept, and do you offer financing?",
+          "where": "FAQ pricing category (not covered)"
+        },
+        {
+          "fact": "Permit handling",
+          "question": "Do you pull permits and schedule inspections for customers, inside and outside Reedsburg city limits?",
+          "where": "FAQ \"Do electrical repairs and upgrades need a permit in Reedsburg?\""
+        }
+      ]
+    },
+    {
+      "path": "/thank-you",
+      "useful_because": "Confirms the request went through, sets expectations for the call back without promising a response time, tells anyone with a live hazard to call instead of waiting, offers service pages to read before the call, and asks past customers for a Google review.",
+      "needs_confirmation": [
+        {
+          "fact": "Reply time for web requests",
+          "question": "Can we tell people when to expect your call back (same day, next business day)?",
+          "where": "thank-you hero and next steps"
+        }
+      ]
+    },
+    {
+      "path": "/privacy-policy/",
+      "useful_because": "Explains, for this site specifically, what the estimate forms and attribution cookie collect, that Page One Insights processes form submissions, how SMS and email opt-ins work, and how to make access, deletion or Do Not Sell requests.",
+      "needs_confirmation": [
+        {
+          "fact": "Business entity type and state of formation",
+          "question": "Is Dellona Electric an LLC, a sole proprietorship or a corporation, and in which state was it formed? The legal pages currently name \"Dellona Electric\" with no entity suffix and use Wisconsin law and Sauk County courts.",
+          "where": "legal-page company name and Terms governing-law clause"
+        }
+      ]
+    },
+    {
+      "path": "/terms/",
+      "useful_because": "Sets the website-use rules and the default terms for estimates, written agreements, payment, cancellation, warranties and Wisconsin governing law that apply when a job's written agreement is silent.",
+      "needs_confirmation": [
+        {
+          "fact": "Business entity type and state of formation",
+          "question": "Is Dellona Electric an LLC, a sole proprietorship or a corporation, and in which state was it formed? The legal pages currently name \"Dellona Electric\" with no entity suffix and use Wisconsin law and Sauk County courts.",
+          "where": "legal-page company name and Terms governing-law clause"
+        },
+        {
+          "fact": "Default cancellation and payment terms",
+          "question": "Please review the Terms' default cancellation rules (no charge before materials are ordered; pay for non-returnable materials after ordering; pay for completed work after starting) and say whether you take deposits. Edit anything that doesn't match how you work.",
+          "where": "Terms sections 07 Payment and 08 Cancellation"
+        },
+        {
+          "fact": "Workmanship warranty",
+          "question": "Do you offer a workmanship warranty, and for how long? The Terms currently say any warranty is stated in the written agreement.",
+          "where": "Terms section 06 Warranties"
+        }
+      ]
+    },
+    {
+      "path": "/cookie-policy/",
+      "useful_because": "Lists every cookie and storage item the site actually uses (the p1_ft attribution cookie, the cookie-notice flag, Google Analytics when enabled, Google Maps on the contact page) with purpose and lifetime, and how to block or opt out.",
+      "needs_confirmation": []
+    },
+    {
+      "path": "/accessibility/",
+      "useful_because": "States the WCAG 2.1 AA target and partial conformance, lists the accessibility features this site actually ships, names the known third-party limits, and gives phone and email routes for reporting barriers or getting information another way.",
+      "needs_confirmation": [
+        {
+          "fact": "Response time for accessibility reports",
+          "question": "How quickly can you reply to an accessibility complaint (many statements promise 5 business days)? The page currently promises a reply without a time frame.",
+          "where": "Accessibility section 5"
+        }
+      ]
     }
   ],
   "consolidate": []

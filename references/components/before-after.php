@@ -51,6 +51,8 @@ if (!function_exists('p1_before_after')) {
 .p1-ba.is-js .p1-ba__handle{position:absolute;top:0;bottom:0;left:var(--ba-pos,50%);width:2px;background:var(--color-white,#fff);box-shadow:0 0 0 1px rgba(0,0,0,.25);pointer-events:none}
 .p1-ba.is-js .p1-ba__handle::after{content:"";position:absolute;top:50%;left:50%;width:40px;height:40px;transform:translate(-50%,-50%);border-radius:50%;background:var(--color-white,#fff);box-shadow:var(--shadow-md,0 4px 14px rgba(0,0,0,.25))}
 .p1-ba.is-js .p1-ba__range{display:block;position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.p1-ba.is-js.is-sweeping .ba-panel--after,.p1-ba.is-js.is-sweeping .p1-ba__handle{transition:clip-path 1.1s cubic-bezier(.45,0,.2,1),left 1.1s cubic-bezier(.45,0,.2,1)}
+@media (prefers-reduced-motion:reduce){.p1-ba.is-js.is-sweeping .ba-panel--after,.p1-ba.is-js.is-sweeping .p1-ba__handle{transition:none}}
 </style>
   <div class="p1-ba__stage">
     <div class="ba-panel ba-panel--before"><img src="<?= $h($bSrc) ?>" alt="<?= $h($beforeAlt) ?>" width="960" height="720" loading="lazy" decoding="async"><span class="ba-label ba-label--before">Before</span></div>
@@ -61,7 +63,11 @@ if (!function_exists('p1_before_after')) {
   </div>
   <?php if ($caption !== ''): ?><figcaption><?= $h($caption) ?></figcaption><?php endif; ?>
 <script defer>
-(function(){var f=document.getElementById(<?= json_encode($id) ?>);if(!f)return;f.classList.add('is-js');var r=f.querySelector('.p1-ba__range');function set(){f.style.setProperty('--ba-pos',r.value+'%');r.setAttribute('aria-valuetext',r.value+'% revealed');}r.addEventListener('input',set);set();})();
+(function(){var f=document.getElementById(<?= json_encode($id) ?>);if(!f)return;f.classList.add('is-js');var r=f.querySelector('.p1-ba__range');function set(){f.style.setProperty('--ba-pos',r.value+'%');r.setAttribute('aria-valuetext',r.value+'% revealed');}r.addEventListener('input',set);set();
+/* v8.1 motion: one slow sweep (50→22→78→50) the first time the slider scrolls into view, so visitors see it is draggable; any touch cancels it */
+var touched=false,timers=[];function stop(){touched=true;timers.forEach(clearTimeout);f.classList.remove('is-sweeping');}
+['pointerdown','touchstart','keydown','input'].forEach(function(ev){r.addEventListener(ev,stop,{passive:true});});
+if('IntersectionObserver' in window&&!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting||touched)return;io.disconnect();f.classList.add('is-sweeping');[[22,350],[78,1500],[50,2650]].forEach(function(st){timers.push(setTimeout(function(){if(touched)return;r.value=st[0];set();},st[1]));});timers.push(setTimeout(function(){f.classList.remove('is-sweeping');},3900));},{threshold:0.6});io.observe(f);}})();
 </script>
 </figure>
 <?php   return ob_get_clean();

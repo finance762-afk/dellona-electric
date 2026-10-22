@@ -8,7 +8,7 @@
 $footPhoneHref = 'tel:' . $phoneRaw;
 $footAddressLine = $address['street'] . ', ' . $address['city'] . ', ' . $address['state'] . ' ' . $address['zip'];
 $footCompany = [];
-foreach ([['About', '/about/'], ['Services', '/services/'], ['Service Area', '/service-areas/'], ['FAQ', '/faq/'], ['Contact', '/contact/']] as $footPair) {
+foreach ([['About', '/about/'], ['Services', '/services/'], ['Service Area', '/service-areas/'], ['Contact', '/contact/']] as $footPair) {
     if (p1_page_exists($footPair[1])) $footCompany[] = $footPair;
 }
 $footLegal = [];
@@ -61,6 +61,7 @@ foreach ([
           <?php foreach ($footCompany as $footPair): ?>
           <li><a href="<?php echo e($footPair[1]); ?>"><?php echo e($footPair[0]); ?></a></li>
           <?php endforeach; ?>
+          <?php if (p1_page_exists('/faq/')): ?><li><a href="/faq/">FAQ</a></li><?php endif; ?>
           <li><a href="<?php echo e($gbpMapsUrl); ?>" target="_blank" rel="noopener">Find us on Google</a></li>
           <li><a href="<?php echo e($reviewRequestUrl); ?>" target="_blank" rel="noopener">Leave a Google review</a></li>
         </ul>

@@ -75,8 +75,18 @@ if (!function_exists('p1_google_reviews_data')) {
         return $y === 1 ? 'a year ago' : $y . ' years ago';
     }
 
-    function p1_google_reviews_stars($rating) {
+    function p1_google_reviews_stars($rating, $exact = false) {
         $star = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>';
+        if ($exact) {
+            // Summary row (v8.1 motion, 2026-10-22): five stars, each filled to the TRUE rating (4.7 = four full + 70 % of the
+            // fifth) via --rating + clip-path in CSS, popping in left→right once the row scrolls into view.
+            $r = max(0, min(5, round((float) $rating, 1)));
+            $html = '';
+            for ($i = 1; $i <= 5; $i++) {
+                $html .= '<span class="p1gr-star" style="--i:' . $i . '">' . str_replace('<svg ', '<svg class="is-off" ', $star) . str_replace('<svg ', '<svg class="is-on" ', $star) . '</span>';
+            }
+            return '<span class="p1gr-stars p1gr-stars--exact" role="img" aria-label="' . number_format($r, 1) . ' out of 5 stars" style="--rating:' . $r . '">' . $html . '</span>';
+        }
         $full = max(0, min(5, (int) round((float) $rating)));
         return '<span class="p1gr-stars" role="img" aria-label="' . $full . ' out of 5 stars">'
              . str_repeat($star, $full)
@@ -109,7 +119,14 @@ if (!function_exists('p1_google_reviews_data')) {
   .p1gr-count { color: var(--p1gr-ink2); font-size: .92rem; }
   .p1gr-stars { display: inline-flex; gap: 1px; color: var(--p1gr-star); vertical-align: middle; }
   .p1gr-stars .is-off { opacity: .28; }
+  .p1gr-star { position: relative; display: inline-grid; width: 20px; height: 20px; }
+  .p1gr-star svg { grid-area: 1 / 1; width: 20px; height: 20px; }
+  .p1gr-star .is-on { clip-path: inset(0 calc(clamp(0, var(--i) - var(--rating, 5), 1) * 100%) 0 0); }
+  .p1gr-stars--exact.is-in .p1gr-star { animation: p1gr-pop .4s cubic-bezier(.34, 1.56, .64, 1) both; animation-delay: calc(var(--i) * 90ms); }
+  @keyframes p1gr-pop { from { transform: scale(.4); opacity: 0; } to { transform: none; opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .p1gr-stars--exact.is-in .p1gr-star { animation: none; } }
   .p1gr-summary .p1gr-stars svg { width: 20px; height: 20px; }
+  .p1gr-summary .p1gr-stars--exact { gap: 2px; }
   .p1gr-write { display: inline-flex; align-items: center; min-height: 44px; padding: .55rem 1.1rem; border-radius: var(--radius, 10px); background: var(--p1gr-accent); color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; }
   .p1gr-write:hover { filter: brightness(1.1); color: #fff; }
   .p1gr-wrap { position: relative; }
@@ -146,7 +163,7 @@ if (!function_exists('p1_google_reviews_data')) {
             <span class="p1gr-label"><?php echo $gLogo; ?> Google Reviews</span>
 <?php   if ($rating !== null): ?>
             <span class="p1gr-score"><?php echo $rating; ?></span>
-            <?php echo p1_google_reviews_stars($d['rating']); ?>
+            <?php echo p1_google_reviews_stars($d['rating'], true); ?>
 <?php   endif; ?>
             <span class="p1gr-count">Based on <?php echo $count; ?> review<?php echo $count === 1 ? '' : 's'; ?></span>
         </div>
@@ -196,6 +213,12 @@ if (!function_exists('p1_google_reviews_data')) {
 <?php   if ($instance === 1): ?>
 <script>
 (function () {
+    /* v8.1 motion: the summary stars pop in once, when the row scrolls into view (fail-open: visible without JS) */
+    var rows = document.querySelectorAll('.p1gr-stars--exact');
+    if (rows.length && 'IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { threshold: 0.6 });
+        rows.forEach(function (r) { io.observe(r); });
+    }
     document.querySelectorAll('.p1gr-wrap').forEach(function (w) {
         var t = w.querySelector('.p1gr-track'), p = w.querySelector('.p1gr-nav--prev'), n = w.querySelector('.p1gr-nav--next');
         if (!t || !p || !n || t.classList.contains('is-few')) return;
