@@ -10,18 +10,18 @@
 
 /* === Self-hosted fonts (v6.2 — no Google Fonts CDN) === */
 @font-face {
-  font-family: 'Bricolage Grotesque';
+  font-family: 'Space Grotesk';
   font-style: normal;
-  font-weight: 400 800;
+  font-weight: 400 700;
   font-display: swap;
-  src: url('/assets/fonts/bricolage-grotesque.woff2') format('woff2');
+  src: url('/assets/fonts/space-grotesk.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Figtree';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400 900;
   font-display: swap;
-  src: url('/assets/fonts/figtree.woff2') format('woff2');
+  src: url('/assets/fonts/inter.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Barlow Condensed';
@@ -33,28 +33,30 @@
 
 /* === Tokens === */
 :root {
-  /* Brand — from logo analysis (build-plan design.colors) */
-  --color-primary: #1f2428;
-  --color-primary-rgb: 31, 36, 40;
-  --color-primary-dark: color-mix(in srgb, #1f2428 78%, black);
-  --color-primary-deep: color-mix(in srgb, #1f2428 62%, black);
-  --color-secondary: #5a6570;
-  --color-secondary-rgb: 90, 101, 112;
-  --color-accent: #c8461a;
-  --color-accent-rgb: 200, 70, 26;
-  --color-accent-dark: color-mix(in srgb, #c8461a 55%, black);      /* accent as TEXT on light — 55% keeps warm accents ≥4.5:1 on paper (2026-09-04) */
-  --color-accent-bright: color-mix(in srgb, #c8461a 80%, white);    /* eyebrows on dark bands */
+  /* Brand — Phase 2 logo analysis (2026-10-22): the logo is monochrome black
+     line-art (Edison bulb + script "Dellona" + geometric "ELECTRIC") on #f8f8f8.
+     Primary = the logo's ink; the single accent is filament amber (minimal-tech). */
+  --color-primary: #1c1f22;
+  --color-primary-rgb: 28, 31, 34;
+  --color-primary-dark: color-mix(in srgb, #1c1f22 78%, black);
+  --color-primary-deep: color-mix(in srgb, #1c1f22 62%, black);
+  --color-secondary: #5b6570;
+  --color-secondary-rgb: 91, 101, 112;
+  --color-accent: #e9a21b;
+  --color-accent-rgb: 233, 162, 27;
+  --color-accent-dark: color-mix(in srgb, #e9a21b 55%, black);      /* accent as TEXT on light — 55% keeps warm accents ≥4.5:1 on paper (2026-09-04) */
+  --color-accent-bright: color-mix(in srgb, #e9a21b 80%, white);    /* eyebrows on dark bands */
 
   /* Ground and ink — warm, hue-biased neutrals (never pure grey) */
-  --color-paper: #f6f3ec;
-  --color-paper-2: color-mix(in srgb, #f6f3ec 92%, #1f2428 8%);
+  --color-paper: #f6f5f1;
+  --color-paper-2: color-mix(in srgb, #f6f5f1 92%, #1c1f22 8%);
   --color-surface: #ffffff;
-  --color-ink: #1b2320;
-  --color-ink-2: color-mix(in srgb, #1b2320 82%, #f6f3ec);
-  --color-muted: color-mix(in srgb, #1b2320 72%, #f6f3ec);           /* 72% = ≥4.5:1 small text on paper (was 58%, failed WCAG AA at 3.6:1) */
-  --color-line: color-mix(in srgb, #1b2320 14%, #f6f3ec);
-  --color-dark: #14181a;
-  --color-dark-alt: color-mix(in srgb, #14181a 80%, #1f2428);
+  --color-ink: #16191c;
+  --color-ink-2: color-mix(in srgb, #16191c 82%, #f6f5f1);
+  --color-muted: color-mix(in srgb, #16191c 72%, #f6f5f1);           /* 72% = ≥4.5:1 small text on paper (was 58%, failed WCAG AA at 3.6:1) */
+  --color-line: color-mix(in srgb, #16191c 14%, #f6f5f1);
+  --color-dark: #121416;
+  --color-dark-alt: color-mix(in srgb, #121416 80%, #1c1f22);
 
   /* Legacy aliases (v6 pages + prompts) */
   --color-white: #ffffff; --color-black: #111111;
@@ -70,8 +72,8 @@
   --color-neutral-warm: var(--color-paper-2);
 
   /* Type — 3-font system */
-  --font-heading: "Bricolage Grotesque", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  --font-body: "Figtree", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-heading: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   --font-accent: "Barlow Condensed", 'Arial Narrow', 'Roboto Condensed', sans-serif;
 
   /* Fluid scale. H1 tops out ~42px desktop; pages never raise it. */
@@ -86,7 +88,7 @@
 
   /* Layout */
   --measure: 62ch; --content-width: 62ch;
-  --nav-height: 84px; --navbar-height: 84px;
+  --nav-height: 112px; --navbar-height: 112px;
   --max-width: 1180px; --container: 1180px; --max-width-wide: 1400px; --container-wide: 1400px;
   --section-pad: clamp(3.5rem, 7vw, 6rem); --section-pad-mobile: 3rem;
   --space-1: .25rem; --space-2: .5rem; --space-3: .75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
@@ -103,7 +105,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 800; color: var(--color-ink); text-wrap: balance; margin: 0; }
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; color: var(--color-ink); text-wrap: balance; margin: 0; }
 h1 { font-size: var(--fs-h1); line-height: 1.08; letter-spacing: -.022em; }
 h2 { font-size: var(--fs-h2); line-height: 1.12; letter-spacing: -.018em; }
 h3 { font-size: var(--fs-h3); line-height: 1.25; letter-spacing: -.008em; }
@@ -114,7 +116,7 @@ ul, ol { margin: 0 0 1rem; padding-left: 1.25rem; }
 a { color: inherit; }
 img, svg, video { max-width: 100%; height: auto; display: block; }
 .photo, .hero img, .gallery-item img, .service-card__image img, .about-image img, .sp-gallery-item img { filter: var(--photo-grade); }
-:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; box-shadow: 0 0 0 2px var(--color-ink); } /* amber alone is ~2:1 on paper; the ink ring carries the 3:1 */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .skip-link { position: absolute; left: 1rem; top: -100px; z-index: 1000; background: var(--color-accent); color: #fff; padding: .6rem 1rem; border-radius: var(--radius); font-weight: 700; }
 .skip-link:focus { top: 1rem; }
@@ -137,6 +139,29 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
 .container-wide { width: min(var(--container-wide), 100% - 2 * clamp(1rem, 3vw, 2rem)); margin-inline: auto; }
 .container-narrow { width: min(760px, 100% - 2 * clamp(1rem, 4vw, 2.5rem)); margin-inline: auto; }
 section, .section { position: relative; padding-block: var(--section-pad); overflow-x: clip; } /* x-clip (2026-09-04): hidden .reveal-left/right are translated ±24px and were widening scrollWidth on mobile */
+/* --- Phase 2 MANDATORY base rules (section collision + text overflow) --- */
+section {
+  position: relative;
+  overflow: hidden;
+  overflow: clip; /* hidden is the fallback; clip keeps position: sticky working inside sections (blog TOC) */
+  padding: clamp(4rem, 10vh, 8rem) 0; /* MANDATORY — prevents section collision */
+}
+section.hero {
+  padding-inline: 0; /* hero is full bleed; the block padding stays on .hero so the H1 clears the fixed header (see note below) */
+}
+h1, h2, h3, h4 {
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+p {
+  overflow-wrap: anywhere;
+}
+.container {
+  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
 /* (removed 2026-09-04: `section.hero { padding: 0 }` out-specified `.hero`'s own padding and pushed every H1 under the fixed header on the first real v7 build) */
 .section--tight { padding-block: clamp(2.25rem, 4vw, 3.5rem); }
 .section--light { background: var(--color-surface); }

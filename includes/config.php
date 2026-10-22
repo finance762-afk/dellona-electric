@@ -212,16 +212,30 @@ $socialLinks = [];
 $googleAnalyticsId = 'G-XXXXXXXXXX';
 
 /* ---------------------------------------------------------------------------
- * Brand colors — build-plan design.colors has no values yet (extracted_from_logo
- *   is flagged but logo_analysis is empty). Phase 2 logo analysis replaces these;
- *   until then they mirror the framework.css :root defaults.
+ * Brand colors — Phase 2 logo analysis (2026-10-22). The logo is monochrome
+ *   black line-art on #f8f8f8, so primary = the logo's ink and the single
+ *   accent is filament amber. Mirrors framework.css :root and build-plan
+ *   design.colors.
  * ------------------------------------------------------------------------- */
 $colors = [
-    'primary'   => '#1f2428',
-    'secondary' => '#5a6570',
-    'accent'    => '#c8461a',
+    'primary'   => '#1c1f22',
+    'secondary' => '#5b6570',
+    'accent'    => '#e9a21b',
 ];
-$archetype = '';   // build-plan design.archetype not set yet (design.style = "modern") — Phase 2 sets it
+$archetype = 'minimal-tech';   // build-plan design.archetype (Phase 2)
+
+/* Logo assets (Phase 2): the delivered logo.png is a JPEG-style RGB file with
+ *   two phone numbers and a URL baked in under the mark. These are the cropped,
+ *   knocked-out derivatives — never overwrite them in place (immutable cache). */
+$logoDark   = '/assets/images/logo-mark-v1.png';        // 877x367, black mark, transparent
+$logoLight  = '/assets/images/logo-mark-white-v1.png';  // 877x367, white mark for dark bands
+$logoRatio  = 877 / 367;                                // 2.39:1 combination mark
+$ogImageDefault = '/assets/images/og-default-v1.jpg';   // 1200x630
+
+/* Estimate CTA label — intake does not confirm that estimates are free, so the
+ *   sitewide button says "Request an Estimate". Switch to "Free Estimate" only
+ *   after the client confirms it. */
+$estimateCtaLabel = 'Request an Estimate';
 
 /* ---------------------------------------------------------------------------
  * Company age — intake: "in business since 2018" (content.years = 8)
@@ -248,7 +262,7 @@ $licenseLabel = '';
  * CSS cache-bust — SINGLE source of truth. Pages MUST NOT set their own.
  * Bump this on every framework.css change.
  * ------------------------------------------------------------------------- */
-$cssVersion = '1';
+$cssVersion = '2';
 
 /* ---------------------------------------------------------------------------
  * Forms — Page One leads endpoint (build-plan form_action, verbatim)
