@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "useful_because": "The homepage shows Dellona Electric's own job photos, each captioned with what it shows: a JuiceBox EV charger on a garage wall, two electricians running conduit to a Kohler standby generator at a log home, panel work in a basement, recessed and pendant lighting in a new kitchen, a restaurant bar's pendant lighting, and the lettered truck and trailer on a new-build lot. It names the owner (Edward Giannoni), the Briar Bluff Rd base in Reedsburg, the 2018 founding year and the full list of 15 services. It also answers the questions a Reedsburg customer asks before calling: service area, how pricing works, Wisconsin permits, EV chargers on a dedicated 240-volt circuit, generator transfer switches, and new construction and commercial work.",
+      "needs_confirmation": [
+        { "fact": "Wisconsin electrical contractor license number and current status", "question": "What is your Wisconsin electrical license number (and contractor/master license, if different)? We'd like to show it on the site.", "where": "hero chips / proof strip / FAQ (left out until confirmed)" },
+        { "fact": "Liability insurance and workers' compensation coverage", "question": "Are you insured (general liability, workers' comp)? Can we say \"licensed and insured\" on the site?", "where": "hero chips / FAQ (left out until confirmed)" },
+        { "fact": "Business hours", "question": "What are your regular business hours?", "where": "footer contact block and schema (left out until confirmed)" },
+        { "fact": "Emergency / after-hours availability", "question": "Do you take emergency or after-hours calls? If so, what hours, and is there an after-hours charge?", "where": "FAQ and mid-page CTA (no emergency or same-day claim made)" },
+        { "fact": "Whether estimates are free", "question": "Are your estimates free? If yes, the buttons can say \"Free Estimate\" instead of \"Request an Estimate\".", "where": "every estimate button and form heading" },
+        { "fact": "How quickly you reply to web requests", "question": "How fast do you usually get back to someone who fills out the website form (same day, next business day)?", "where": "hero form tagline and estimate dialog (currently says only that you'll call back)" },
+        { "fact": "Pricing approach and typical price ranges", "question": "How do you price work (flat rate, hourly, trip/service-call fee)? Any typical ranges you're comfortable publishing, e.g. outlet repair, EV charger install, panel upgrade?", "where": "FAQ \"How much does an electrical repair or installation cost?\"" },
+        { "fact": "Your actual job process (4 steps)", "question": "Walk us through a typical job: what happens after someone calls, whether you visit before quoting, how you handle permits and inspections, and what the customer gets at the end.", "where": "about section \"How a job with Dellona Electric goes\" and estimate section \"What happens next\"" },
+        { "fact": "Permit and inspection handling", "question": "Do you pull the electrical permits and schedule the inspections for your customers in Reedsburg / Sauk County?", "where": "FAQ \"Do electrical upgrades need a permit in Wisconsin?\"" },
+        { "fact": "Service radius and towns served", "question": "Which towns do you regularly work in around Reedsburg (e.g. Baraboo, Wisconsin Dells, Lake Delton, La Valle, Loganville, Lime Ridge)? How far will you travel?", "where": "FAQ service-area answer, footer entity block, future area pages" },
+        { "fact": "Farm / agricultural electrical work", "question": "Do you do farm and agricultural electrical work (barns, outbuildings, livestock buildings)?", "where": "services section (not claimed)" },
+        { "fact": "Owner background", "question": "Edward, how did you get into the trade, and how long have you been an electrician? Can we name the crew members in the truck photo?", "where": "about section and the crew photo caption" },
+        { "fact": "Photo job details", "question": "For the kitchen, restaurant bar, log-home generator and sunroom photos: what town was each job in, and what did you do there? Captions currently describe only what is visible.", "where": "hero photo tag, gallery captions, service cards" }
+      ]
+    }
+  ],
+  "consolidate": []
+}

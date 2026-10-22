@@ -95,6 +95,17 @@ $headGraph = [
         $headBusiness,
     ],
 ];
+/* One @graph per page (aeo-content-schema §1.2.3): array page schema is merged
+ * into the sitewide graph; a pre-encoded string still prints as its own script. */
+if (!empty($schemaMarkup) && is_array($schemaMarkup)) {
+    $headPageNodes = isset($schemaMarkup['@graph']) ? $schemaMarkup['@graph'] : (isset($schemaMarkup['@type']) ? [$schemaMarkup] : $schemaMarkup);
+    foreach ((array) $headPageNodes as $headNode) {
+        if (!is_array($headNode)) continue;
+        unset($headNode['@context']);
+        $headGraph['@graph'][] = $headNode;
+    }
+    $schemaMarkup = '';
+}
 $headJsonFlags = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG;
 ?><!DOCTYPE html>
 <html lang="en">

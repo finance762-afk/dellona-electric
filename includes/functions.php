@@ -5,6 +5,8 @@
  * No FAQPage helper on purpose: FAQPage JSON-LD is never emitted (visible FAQ text only).
  */
 
+require_once __DIR__ . '/p1-form-helpers.php';   // p1_lead_hidden_fields(), p1_consent_row(), p1_service_options()
+
 if (!function_exists('e')) {
     /** HTML-escape shorthand. */
     function e($value): string {
@@ -124,6 +126,70 @@ function icon(string $name, int $size = 20, string $class = ''): string {
 }
 
 /**
+ * Responsive variants on disk for a photo basename, e.g. 'hero-kitchen-lighting-v1'.
+ * Returns [width => '/assets/images/<name>-<width>.<ext>'] sorted by width. Variants are never
+ * upscaled, so a 720px original ships -480 and -720 (the native width) rather than a fake -960.
+ */
+function p1_image_variants(string $name, string $ext): array {
+    static $cache = [];
+    $key = $name . '.' . $ext;
+    if (isset($cache[$key])) return $cache[$key];
+    $dir = rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/') . '/assets/images/';
+    $out = [];
+    foreach ((array) glob($dir . $name . '-*.' . $ext) as $file) {
+        if (preg_match('/-(\d+)\.' . preg_quote($ext, '/') . '$/', $file, $m)) {
+            $out[(int) $m[1]] = '/assets/images/' . basename($file);
+        }
+    }
+    ksort($out);
+    return $cache[$key] = $out;
+}
+
+/** "url 480w, url 960w" srcset string for a photo basename and format ('' when no variants exist). */
+function p1_srcset(string $name, string $ext = 'webp'): string {
+    $parts = [];
+    foreach (p1_image_variants($name, $ext) as $w => $url) $parts[] = $url . ' ' . $w . 'w';
+    return implode(', ', $parts);
+}
+
+/**
+ * <picture> for a local photo (v6.3): AVIF source first, WebP srcset on the <img>, the
+ * base .jpg as src, explicit width/height from the jpg (no CLS).
+ * $opt: sizes, class (on <img>), loading ('lazy'|'eager'), priority (true = fetchpriority high,
+ * hero only), width/height overrides.
+ */
+function p1_picture(string $name, string $alt, array $opt = []): string {
+    $root  = rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/');
+    $src   = '/assets/images/' . $name . '.jpg';
+    $dims  = @getimagesize($root . $src) ?: [1200, 900];
+    $w     = (int) ($opt['width'] ?? $dims[0]);
+    $h     = (int) ($opt['height'] ?? $dims[1]);
+    $sizes = $opt['sizes'] ?? '(max-width: 768px) 100vw, 600px';
+    $eager = !empty($opt['priority']) || ($opt['loading'] ?? 'lazy') === 'eager';
+    $avif  = p1_srcset($name, 'avif');
+    $webp  = p1_srcset($name, 'webp');
+    $out   = '<picture>';
+    if ($avif !== '') $out .= '<source type="image/avif" srcset="' . e($avif) . '" sizes="' . e($sizes) . '">';
+    $out  .= '<img src="' . e($src) . '"';
+    if ($webp !== '') $out .= ' srcset="' . e($webp) . '" sizes="' . e($sizes) . '"';
+    $out  .= ' alt="' . e($alt) . '" width="' . $w . '" height="' . $h . '"';
+    if (!empty($opt['class'])) $out .= ' class="' . e($opt['class']) . '"';
+    $out  .= $eager ? ' loading="eager"' : ' loading="lazy" decoding="async"';
+    if (!empty($opt['priority'])) $out .= ' fetchpriority="high"';
+    $out  .= '></picture>';
+    return $out;
+}
+
+/** Look up a config.php $services row by slug (null when absent). */
+function p1_service_by_slug(string $slug): ?array {
+    global $services;
+    foreach ((array) $services as $s) {
+        if (($s['slug'] ?? '') === $slug) return $s;
+    }
+    return null;
+}
+
+/**
  * Service JSON-LD (array — json_encode it or pass to head.php via $schemaMarkup).
  * $service is a config.php $services row. Provider references the sitewide #organization.
  */
@@ -145,6 +211,69 @@ function generateServiceSchema(array $service): array {
         'provider'    => ['@id' => rtrim($siteUrl, '/') . '/#organization'],
         'areaServed'  => $areas,
     ];
+}
+
+/**
+ * WebPage JSON-LD node tied to the sitewide #website / #organization nodes.
+ * head.php merges array schema into its single @graph.
+ */
+function generateWebPageSchema(string $name, string $description, string $url, string $image = ''): array {
+    global $siteUrl;
+    $root = rtrim($siteUrl, '/');
+    $node = [
+        '@type'       => 'WebPage',
+        '@id'         => $url . '#webpage',
+        'url'         => $url,
+        'name'        => $name,
+        'description' => $description,
+        'isPartOf'    => ['@id' => $root . '/#website'],
+        'about'       => ['@id' => $root . '/#organization'],
+        'inLanguage'  => 'en-US',
+    ];
+    if ($image !== '') {
+        $node['primaryImageOfPage'] = ['@type' => 'ImageObject', 'url' => strpos($image, 'http') === 0 ? $image : $root . $image];
+    }
+    return $node;
+}
+
+/**
+ * The full lead form (contact-form-standard.md): name, phone, email, service, message,
+ * three unbundled consent boxes (email optional, SMS optional, terms required), all
+ * hidden fields via p1_lead_hidden_fields(). $formId is the form_location/attribution id
+ * and must be unique on the page; $prefix keeps element ids unique.
+ */
+function p1_full_lead_form(string $formId, string $prefix, string $submitLabel = 'Send my request'): string {
+    global $formAction, $siteName, $email;
+    $p = e($prefix);
+    ob_start(); ?>
+<form action="<?php echo e($formAction); ?>" method="POST" class="estimate-form" id="<?php echo $p; ?>-form">
+<?php echo p1_lead_hidden_fields($formId); ?>
+  <div class="form-grid">
+    <div class="field"><label for="<?php echo $p; ?>-name">Your name *</label><input id="<?php echo $p; ?>-name" type="text" name="name" autocomplete="name" required></div>
+    <div class="field"><label for="<?php echo $p; ?>-phone">Phone *</label><input id="<?php echo $p; ?>-phone" type="tel" name="phone" autocomplete="tel" required></div>
+    <div class="field full"><label for="<?php echo $p; ?>-email">Email *</label><input id="<?php echo $p; ?>-email" type="email" name="email" autocomplete="email" required></div>
+    <div class="field full"><label for="<?php echo $p; ?>-service">Service needed</label><select id="<?php echo $p; ?>-service" name="service"><?php echo p1_service_options(); ?></select></div>
+    <div class="field full"><label for="<?php echo $p; ?>-message">What's going on?</label><textarea id="<?php echo $p; ?>-message" name="message" rows="3" placeholder="Breaker keeps tripping, adding a charger in the garage, wiring a new build…"></textarea></div>
+  </div>
+  <fieldset class="form-consent-fieldset">
+    <legend class="form-consent-legend">Communication consent</legend>
+    <label class="form-consent-item" for="<?php echo $p; ?>-email-opt">
+      <input id="<?php echo $p; ?>-email-opt" type="checkbox" name="email_opt_in" value="yes" class="consent-checkbox">
+      <span class="consent-label"><strong>Email updates (optional):</strong> I agree to receive emails from <?php echo e($siteName); ?> about my inquiry, services, promotions and news. I can unsubscribe anytime via the link in any email or by emailing <?php echo e($email); ?>. Message frequency varies.</span>
+    </label>
+    <label class="form-consent-item" for="<?php echo $p; ?>-sms-opt">
+      <input id="<?php echo $p; ?>-sms-opt" type="checkbox" name="sms_opt_in" value="yes" class="consent-checkbox">
+      <span class="consent-label"><strong>SMS/Text messages (optional):</strong> I agree to receive text messages from <?php echo e($siteName); ?> at the phone number I provided. Message types may include appointment reminders, service updates and promotional offers. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help. <strong>Consent is not a condition of purchase.</strong></span>
+    </label>
+    <label class="form-consent-item form-consent-required" for="<?php echo $p; ?>-terms">
+      <input id="<?php echo $p; ?>-terms" type="checkbox" name="terms_accepted" value="yes" class="consent-checkbox" required>
+      <span class="consent-label">I have read and agree to the <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms/">Terms of Service</a>. <span class="required-star">*</span></span>
+    </label>
+  </fieldset>
+  <button type="submit" class="btn btn-primary btn-lg btn-block"><?php echo e($submitLabel); ?></button>
+</form>
+<?php
+    return (string) ob_get_clean();
 }
 
 /** BreadcrumbList JSON-LD from [['name' => 'Services', 'url' => '/services/'], ...] (Home is prepended). */
