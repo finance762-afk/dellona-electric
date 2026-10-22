@@ -4,19 +4,552 @@
       "path": "/",
       "useful_because": "The homepage shows Dellona Electric's own job photos, each captioned with what it shows: a JuiceBox EV charger on a garage wall, two electricians running conduit to a Kohler standby generator at a log home, panel work in a basement, recessed and pendant lighting in a new kitchen, a restaurant bar's pendant lighting, and the lettered truck and trailer on a new-build lot. It names the owner (Edward Giannoni), the Briar Bluff Rd base in Reedsburg, the 2018 founding year and the full list of 15 services. It also answers the questions a Reedsburg customer asks before calling: service area, how pricing works, Wisconsin permits, EV chargers on a dedicated 240-volt circuit, generator transfer switches, and new construction and commercial work.",
       "needs_confirmation": [
-        { "fact": "Wisconsin electrical contractor license number and current status", "question": "What is your Wisconsin electrical license number (and contractor/master license, if different)? We'd like to show it on the site.", "where": "hero chips / proof strip / FAQ (left out until confirmed)" },
-        { "fact": "Liability insurance and workers' compensation coverage", "question": "Are you insured (general liability, workers' comp)? Can we say \"licensed and insured\" on the site?", "where": "hero chips / FAQ (left out until confirmed)" },
-        { "fact": "Business hours", "question": "What are your regular business hours?", "where": "footer contact block and schema (left out until confirmed)" },
-        { "fact": "Emergency / after-hours availability", "question": "Do you take emergency or after-hours calls? If so, what hours, and is there an after-hours charge?", "where": "FAQ and mid-page CTA (no emergency or same-day claim made)" },
-        { "fact": "Whether estimates are free", "question": "Are your estimates free? If yes, the buttons can say \"Free Estimate\" instead of \"Request an Estimate\".", "where": "every estimate button and form heading" },
-        { "fact": "How quickly you reply to web requests", "question": "How fast do you usually get back to someone who fills out the website form (same day, next business day)?", "where": "hero form tagline and estimate dialog (currently says only that you'll call back)" },
-        { "fact": "Pricing approach and typical price ranges", "question": "How do you price work (flat rate, hourly, trip/service-call fee)? Any typical ranges you're comfortable publishing, e.g. outlet repair, EV charger install, panel upgrade?", "where": "FAQ \"How much does an electrical repair or installation cost?\"" },
-        { "fact": "Your actual job process (4 steps)", "question": "Walk us through a typical job: what happens after someone calls, whether you visit before quoting, how you handle permits and inspections, and what the customer gets at the end.", "where": "about section \"How a job with Dellona Electric goes\" and estimate section \"What happens next\"" },
-        { "fact": "Permit and inspection handling", "question": "Do you pull the electrical permits and schedule the inspections for your customers in Reedsburg / Sauk County?", "where": "FAQ \"Do electrical upgrades need a permit in Wisconsin?\"" },
-        { "fact": "Service radius and towns served", "question": "Which towns do you regularly work in around Reedsburg (e.g. Baraboo, Wisconsin Dells, Lake Delton, La Valle, Loganville, Lime Ridge)? How far will you travel?", "where": "FAQ service-area answer, footer entity block, future area pages" },
-        { "fact": "Farm / agricultural electrical work", "question": "Do you do farm and agricultural electrical work (barns, outbuildings, livestock buildings)?", "where": "services section (not claimed)" },
-        { "fact": "Owner background", "question": "Edward, how did you get into the trade, and how long have you been an electrician? Can we name the crew members in the truck photo?", "where": "about section and the crew photo caption" },
-        { "fact": "Photo job details", "question": "For the kitchen, restaurant bar, log-home generator and sunroom photos: what town was each job in, and what did you do there? Captions currently describe only what is visible.", "where": "hero photo tag, gallery captions, service cards" }
+        {
+          "fact": "Wisconsin electrical contractor license number and current status",
+          "question": "What is your Wisconsin electrical license number (and contractor/master license, if different)? We'd like to show it on the site.",
+          "where": "hero chips / proof strip / FAQ (left out until confirmed)"
+        },
+        {
+          "fact": "Liability insurance and workers' compensation coverage",
+          "question": "Are you insured (general liability, workers' comp)? Can we say \"licensed and insured\" on the site?",
+          "where": "hero chips / FAQ (left out until confirmed)"
+        },
+        {
+          "fact": "Business hours",
+          "question": "What are your regular business hours?",
+          "where": "footer contact block and schema (left out until confirmed)"
+        },
+        {
+          "fact": "Emergency / after-hours availability",
+          "question": "Do you take emergency or after-hours calls? If so, what hours, and is there an after-hours charge?",
+          "where": "FAQ and mid-page CTA (no emergency or same-day claim made)"
+        },
+        {
+          "fact": "Whether estimates are free",
+          "question": "Are your estimates free? If yes, the buttons can say \"Free Estimate\" instead of \"Request an Estimate\".",
+          "where": "every estimate button and form heading"
+        },
+        {
+          "fact": "How quickly you reply to web requests",
+          "question": "How fast do you usually get back to someone who fills out the website form (same day, next business day)?",
+          "where": "hero form tagline and estimate dialog (currently says only that you'll call back)"
+        },
+        {
+          "fact": "Pricing approach and typical price ranges",
+          "question": "How do you price work (flat rate, hourly, trip/service-call fee)? Any typical ranges you're comfortable publishing, e.g. outlet repair, EV charger install, panel upgrade?",
+          "where": "FAQ \"How much does an electrical repair or installation cost?\""
+        },
+        {
+          "fact": "Your actual job process (4 steps)",
+          "question": "Walk us through a typical job: what happens after someone calls, whether you visit before quoting, how you handle permits and inspections, and what the customer gets at the end.",
+          "where": "about section \"How a job with Dellona Electric goes\" and estimate section \"What happens next\""
+        },
+        {
+          "fact": "Permit and inspection handling",
+          "question": "Do you pull the electrical permits and schedule the inspections for your customers in Reedsburg / Sauk County?",
+          "where": "FAQ \"Do electrical upgrades need a permit in Wisconsin?\""
+        },
+        {
+          "fact": "Service radius and towns served",
+          "question": "Which towns do you regularly work in around Reedsburg (e.g. Baraboo, Wisconsin Dells, Lake Delton, La Valle, Loganville, Lime Ridge)? How far will you travel?",
+          "where": "FAQ service-area answer, footer entity block, future area pages"
+        },
+        {
+          "fact": "Farm / agricultural electrical work",
+          "question": "Do you do farm and agricultural electrical work (barns, outbuildings, livestock buildings)?",
+          "where": "services section (not claimed)"
+        },
+        {
+          "fact": "Owner background",
+          "question": "Edward, how did you get into the trade, and how long have you been an electrician? Can we name the crew members in the truck photo?",
+          "where": "about section and the crew photo caption"
+        },
+        {
+          "fact": "Photo job details",
+          "question": "For the kitchen, restaurant bar, log-home generator and sunroom photos: what town was each job in, and what did you do there? Captions currently describe only what is visible.",
+          "where": "hero photo tag, gallery captions, service cards"
+        }
+      ]
+    },
+    {
+      "path": "/services/panel-upgrades/",
+      "useful_because": "This page tells a Reedsburg homeowner how to read their own panel: the four warning signs (breakers that won't stay on, heat or buzzing, no open slots, Federal Pacific/Zinsco), a repair-versus-replace table covering six real situations, the typical 60-100 / 150 / 200 amp service sizes, and what a panel upgrade actually covers, including the surge-protection requirement that arrived with Wisconsin's September 2026 adoption of the 2023 NEC. It shows Dellona Electric's own basement panel job and Kohler standby install, and points to the City of Reedsburg Building Inspection Department for permits. None of that is on the homepage or the sibling pages.",
+      "needs_confirmation": [
+        {
+          "fact": "Typical price range for panel repair and panel upgrades",
+          "question": "Is there a price range you're comfortable publishing for a panel upgrade (for example 100A to 200A) or for replacing a single breaker?",
+          "where": "FAQ \"How much does an electrical panel upgrade cost?\" (answered without numbers)"
+        },
+        {
+          "fact": "Who pulls permits and schedules inspections on panel upgrades",
+          "question": "On a panel upgrade, do you pull the electrical permit and schedule the inspection, in the City of Reedsburg and in the surrounding towns?",
+          "where": "FAQ \"Does a panel upgrade need a permit in Reedsburg?\" and process step 4"
+        },
+        {
+          "fact": "How long the power is off during a panel swap",
+          "question": "How long is a home's power usually off during a panel upgrade, and do you coordinate the disconnect/reconnect with the utility?",
+          "where": "process step 3 \"Power down and swap\" (no duration stated)"
+        },
+        {
+          "fact": "Panel brands installed and any workmanship warranty",
+          "question": "Which panel brands do you usually install, and do you offer a warranty on panel work?",
+          "where": "what's-included list (no brand or warranty named)"
+        },
+        {
+          "fact": "Whether a load calculation is done before every upgrade",
+          "question": "Do you do a load calculation before sizing a new panel? We describe it as part of the job; please confirm.",
+          "where": "what's-included checklist and process step 2"
+        }
+      ]
+    },
+    {
+      "path": "/services/ceiling-fan-installation/",
+      "useful_because": "This page answers the practical fan questions a homeowner can't get from the homepage: why a fan can't hang from a light-only box (the NEC fan-support box rule and its 70-pound limit), a blade-span-by-room-size table, ceiling height to downrod length, clearance and mounting height, why a light dimmer must never run a fan motor, and a six-option table of fan controls showing what wiring each needs. It also covers summer and winter blade direction for Wisconsin heating seasons, and shows Dellona Electric's nine-blade living-room fan job.",
+      "needs_confirmation": [
+        {
+          "fact": "Price or range for ceiling fan installation",
+          "question": "Do you have a typical price, or range, for hanging a fan on an existing fan-rated box versus a new box and brace?",
+          "where": "FAQ \"How much does it cost to install a ceiling fan?\" (answered without numbers)"
+        },
+        {
+          "fact": "Whether customers supply the fan",
+          "question": "Do customers usually buy their own fan, or do you supply fans?",
+          "where": "process step 2 (no supply arrangement stated)"
+        },
+        {
+          "fact": "Service radius for fan installs outside Reedsburg",
+          "question": "How far outside Reedsburg will you go for a fan install, and which towns do you regularly cover?",
+          "where": "FAQ \"Do you install ceiling fans outside the city of Reedsburg?\""
+        },
+        {
+          "fact": "Details of the living-room fan job",
+          "question": "What did you do in the living room with the nine-blade fan (fan only, or also the recessed lights, niche lights and TV box)? What town was it?",
+          "where": "proof section and expert section"
+        }
+      ]
+    },
+    {
+      "path": "/services/commercial-electrical/",
+      "useful_because": "This page is written for a business owner: it names the electrical problems that actually cost a business money (dark customer areas, trips when new equipment starts, failed exit/emergency light tests with the NFPA 101 monthly 30-second and yearly 90-minute test), breaks down restaurants, retail, offices and light industrial spaces, explains how commercial review works in Wisconsin (DSPS or a delegated municipality), and compares commercial and residential work in a five-row table covering review, wiring method, life-safety lighting, equipment and scheduling. It shows Dellona Electric's restaurant bar photo. The homepage only mentions commercial work in passing.",
+      "needs_confirmation": [
+        {
+          "fact": "What Dellona did at the restaurant bar in the photo",
+          "question": "What was your work at the restaurant bar in the photo (pendants, ceiling fixtures, exit sign, whole build-out), and can we name the business and town?",
+          "where": "expert and proof sections (described only as from your job photos)"
+        },
+        {
+          "fact": "Scheduling commercial work outside open hours",
+          "question": "Will you schedule commercial work before opening or after close so a business can stay open? The page says shutoffs are planned with the owner.",
+          "where": "process step 3 \"Plan the shutoffs\", comparison table, related-card bullet \"Repairs that fit your hours\""
+        },
+        {
+          "fact": "Exit and emergency lighting service",
+          "question": "Do you repair, replace and install exit signs and emergency lights, and do you do the monthly/annual testing for businesses?",
+          "where": "bento card, what's-included list"
+        },
+        {
+          "fact": "Light industrial scope and three-phase work",
+          "question": "What light industrial work do you take on (shop buildings, machines), and do you work on three-phase service?",
+          "where": "space-type strip \"Light industrial\" (three-phase not mentioned)"
+        },
+        {
+          "fact": "Commercial permits and plan review handling",
+          "question": "On commercial jobs, do you handle the permit and any plan submission to DSPS or the municipality?",
+          "where": "process step 2 and FAQ on permits"
+        },
+        {
+          "fact": "Pricing approach for commercial work",
+          "question": "How do you price commercial work (walk-through then quote, hourly, after-hours rate)?",
+          "where": "FAQ \"How much does commercial electrical work cost?\" (answered without numbers)"
+        }
+      ]
+    },
+    {
+      "path": "/services/electrical-inspections/",
+      "useful_because": "This page lays out exactly what a Dellona Electric home electrical inspection looks at, as a five-part checklist (panel and service, wiring, outlets and switches, GFCI/AFCI protection, smoke and CO alarms), names the older wiring types common in Wisconsin houses (knob-and-tube, cloth-covered cable, 1965-73 aluminum branch circuits, two-prong outlets), gives the four situations where an inspection is worth booking, cites Wisconsin's carbon monoxide alarm statute (Wis. Stat. 101.647), and explains in a table how an electrician's inspection differs from the municipal code inspection and a general home inspection. None of this is on the homepage or the other service pages.",
+      "needs_confirmation": [
+        {
+          "fact": "Whether Dellona Electric offers whole-home electrical inspections as a standalone service",
+          "question": "Do you do whole-home electrical inspections (for buyers, remodels, insurance), and is there anything you do not check?",
+          "where": "whole page; inspection checklist"
+        },
+        {
+          "fact": "How inspection findings are delivered",
+          "question": "After an inspection, do customers get a written list or report of what you found, or do you go over it in person?",
+          "where": "process step 4 \"Go over the findings\" and the comparison table (no written report promised)"
+        },
+        {
+          "fact": "Price or pricing method for an inspection",
+          "question": "How do you price a home electrical inspection (flat fee, hourly, by house size)? Any figure you are comfortable publishing?",
+          "where": "FAQ \"How much does a home electrical inspection cost?\" (answered without numbers)"
+        },
+        {
+          "fact": "Maintenance tasks done on the same visit",
+          "question": "On a maintenance visit, do you tighten connections, test every GFCI/AFCI and replace worn devices? We describe these; please confirm.",
+          "where": "expert section \"Maintenance as well as inspection\""
+        },
+        {
+          "fact": "Typical visit length",
+          "question": "How long does a typical home electrical inspection take?",
+          "where": "process section (no duration stated)"
+        },
+        {
+          "fact": "Whether the garage/EV charger photo is a Dellona job",
+          "question": "Is the JuiceBox charger and GFCI outlet photo from one of your jobs? It's captioned that way.",
+          "where": "proof photo caption"
+        }
+      ]
+    },
+    {
+      "path": "/services/electrical-repair/",
+      "useful_because": "This page lets a Reedsburg customer narrow down their own electrical fault before calling: a six-row symptom-to-cause ladder (instant trips vs overload trips, dead outlets with no tripped breaker, warm devices, brightening/dimming lights from a possible lost neutral, half the house dead), what to check first themselves (upstream GFCIs, trying an appliance on another circuit), a table on when a fault means repair vs rewire vs panel upgrade, the 12.5 A space-heater fact, and what a repair visit covers including the 2023 NEC replacement rules Wisconsin adopted in September 2026. It shows Dellona Electric's own sunroom device job and basement panel work. None of that is on the homepage or the sibling pages.",
+      "needs_confirmation": [
+        {
+          "fact": "Pricing approach for repair calls (trip charge, hourly, flat rate)",
+          "question": "How do you charge for a repair or troubleshooting call (service-call fee, hourly, flat rate per repair)? Any typical ranges you're comfortable publishing?",
+          "where": "FAQ \"How much does an electrical repair cost?\" (answered without numbers)"
+        },
+        {
+          "fact": "How quickly someone can come out for a repair",
+          "question": "For a non-emergency repair, how soon can you usually get out (same week, next business day)?",
+          "where": "FAQ \"Can someone come out right away for an electrical problem?\" (no timeframe stated)"
+        },
+        {
+          "fact": "The owner's actual troubleshooting process",
+          "question": "We describe a repair visit as: hear the symptoms, isolate the circuit, test, fix and retest under load. Is that how your visits go? Anything to add or change?",
+          "where": "\"How does an electrical repair visit work?\" checklist and 4 steps"
+        },
+        {
+          "fact": "Who is in the crew/truck photo",
+          "question": "Who are the two crew members in the photo beside the company truck? May we name them?",
+          "where": "expert section photo"
+        }
+      ]
+    },
+    {
+      "path": "/services/emergency-electrician/",
+      "useful_because": "This page gives someone with an urgent electrical problem a safe first five minutes (get clear, breaker off only if the panel is dry and cool, unplug only if the cord isn't hot, stay 30 feet from downed lines, call the right number) and a who-to-call table that separates 911, the utility (Reedsburg Utility Commission, 608-768-1000, inside the city) and Dellona Electric for seven real situations, including a lost neutral and a storm-torn service mast. It promises no availability window and states plainly that hours are not listed yet. None of this is on the homepage or other service pages.",
+      "needs_confirmation": [
+        {
+          "fact": "Emergency / after-hours availability and hours",
+          "question": "Do you take emergency or after-hours calls? If so, what hours (nights, weekends), and is there an after-hours charge?",
+          "where": "FAQ \"Do you offer emergency or after-hours electrical service?\" (says hours aren't listed yet), hero and CTA (no availability promised)"
+        },
+        {
+          "fact": "Typical response time for urgent calls",
+          "question": "For an urgent call (burning smell, half the house out), how quickly can you usually get there?",
+          "where": "\"What happens after you call\" section (no timeframe stated)"
+        },
+        {
+          "fact": "Pricing for urgent/after-hours visits",
+          "question": "How are urgent visits charged (call-out fee, hourly, after-hours rate)?",
+          "where": "FAQ \"How much does an emergency electrical repair cost?\" (answered without numbers)"
+        },
+        {
+          "fact": "Storm-damaged service mast and meter base repairs",
+          "question": "Do you repair storm-damaged service masts and meter bases and coordinate reconnection with the utility (Reedsburg Utility Commission in the city, and the rural utilities outside it)?",
+          "where": "who-to-call table, last row, and the 'Storm damage at the mast' sign card"
+        },
+        {
+          "fact": "Whether the office answers the phone directly or uses voicemail after hours",
+          "question": "If someone calls (608) 477-8453 outside business hours, does it ring through to someone or go to voicemail?",
+          "where": "hero and first-five-minutes step 5"
+        }
+      ]
+    },
+    {
+      "path": "/services/ev-charger-installation/",
+      "useful_because": "The page explains when a home has outgrown the 120-volt cord (long commutes, a second EV, Wisconsin winter range loss, shared or extension-cord outlets), maps charger current to breaker size (32 A on 40 A, 40 A on 50 A, 48 A hardwired on 60 A, sized at 125%), and compares Level 1, plug-in Level 2 and hardwired Level 2, including the 2023 NEC GFCI rule for 240-volt garage receptacles that arrived with Wisconsin's September 2026 code adoption. It shows Dellona Electric's own JuiceBox install on a dedicated 240-volt receptacle and lays out the four-step process from parking spot to test charge.",
+      "needs_confirmation": [
+        {
+          "fact": "Price range for a typical EV charger installation",
+          "question": "Is there a price range you're comfortable publishing for a typical garage EV charger install (charger supplied by the customer, panel with room)?",
+          "where": "FAQ \"How much does EV charger installation cost in Reedsburg?\" (answered without numbers)"
+        },
+        {
+          "fact": "Who pulls the permit for a charger circuit",
+          "question": "For a new EV charger circuit, do you pull the electrical permit and schedule the inspection, in the city and in the surrounding towns?",
+          "where": "FAQ \"Does adding an EV charger circuit need a permit?\""
+        },
+        {
+          "fact": "Whether Dellona supplies chargers or installs customer-supplied units, and preferred brands",
+          "question": "Do you supply EV chargers or install the one the customer buys? Any brands you recommend or avoid?",
+          "where": "process step 2 (no brand or supply arrangement stated)"
+        },
+        {
+          "fact": "Plug-in vs hardwired preference and outdoor/detached-garage installs",
+          "question": "Do you prefer hardwiring chargers, and do you install outdoor or detached-garage chargers (trenching/conduit)?",
+          "where": "comparison table and process step 3"
+        },
+        {
+          "fact": "Details of the JuiceBox job in the photo",
+          "question": "For the JuiceBox charger photo: what town was it in, and what did the job involve (new circuit, panel work)?",
+          "where": "proof section caption (describes only what is visible)"
+        }
+      ]
+    },
+    {
+      "path": "/services/generator-installation/",
+      "useful_because": "The page explains why rural homes on private wells need backup power (no power means no water), warns against backfeeding a generator through a dryer outlet, lists the circuits people put on a generator, and compares standby plus automatic transfer switch against portable generators with a manual transfer switch or an interlock and inlet. It shows Dellona Electric's own Kohler standby install beside a York AC unit at a log home, explains why motor start-up surge drives generator sizing, and cites USDA's 48-hour freezer guidance.",
+      "needs_confirmation": [
+        {
+          "fact": "Price range for standby installs and portable hookups",
+          "question": "Is there a price range you're comfortable publishing for a portable generator inlet/interlock or transfer switch, or for wiring a standby generator?",
+          "where": "FAQ \"How much does a generator installation cost?\" (answered without numbers)"
+        },
+        {
+          "fact": "Who handles the gas/LP line to standby generators",
+          "question": "On a standby generator, who runs the natural gas or propane line: you, a plumber you coordinate with, or the propane supplier?",
+          "where": "what's-included list (\"Ask when you call how it will be handled\")"
+        },
+        {
+          "fact": "Generator brands installed or sold, and whether Dellona sells units",
+          "question": "Do you sell standby generators (Kohler, Generac, others) or install units the customer buys? Are you a dealer for any brand?",
+          "where": "expert and proof sections (Kohler named only because it is visible in the photo)"
+        },
+        {
+          "fact": "Whether Dellona offers generator maintenance/service",
+          "question": "Do you offer ongoing generator maintenance or annual service?",
+          "where": "comparison table \"Upkeep\" row (no service offer made)"
+        },
+        {
+          "fact": "Permit handling for generator installs",
+          "question": "Do you pull the electrical permit for generator installs in the city and surrounding towns?",
+          "where": "FAQ \"Does a standby generator need a permit in Reedsburg?\""
+        },
+        {
+          "fact": "Details of the log-home generator job",
+          "question": "For the log-home Kohler generator photo: what town was it in, and was it whole-house or essentials-only?",
+          "where": "proof section caption"
+        }
+      ]
+    },
+    {
+      "path": "/services/lighting-installation/",
+      "useful_because": "This page helps a Reedsburg homeowner match a fixture to a spot: an eight-row guide comparing LED wafer and recessed housings, pendants, under-cabinet strips, soffit lights, wall lights, motion floodlights and photocell yard lights by best use, what the install involves and what to watch for. It explains why LED lights flicker on older dimmers, the NEC 50-pound fixture-box rule and warm-versus-cool color temperature. It also shows four of Dellona Electric's own lighting jobs (a vaulted kitchen with recessed lights and glass pendants, soffit lights on a new home, up-and-down wall lights on a new garage, and filament pendants in a restaurant bar), which the homepage only lists as a card.",
+      "needs_confirmation": [
+        {
+          "fact": "Price range for recessed lights, pendants or exterior lighting",
+          "question": "Is there a per-light or typical price range you're comfortable publishing for adding recessed lights, pendants or exterior lights?",
+          "where": "FAQ \"How much does it cost to add recessed lights or pendants?\" (answered without numbers)"
+        },
+        {
+          "fact": "Who pulls permits for new lighting circuits",
+          "question": "When a lighting job adds circuits or exterior lights, do you pull the permit and schedule the inspection?",
+          "where": "FAQ \"Do I need a permit to add lights in Reedsburg?\""
+        },
+        {
+          "fact": "Lighting design / layout help and fixture supply",
+          "question": "Do you help customers choose fixtures and lay out lighting, and do you supply fixtures or install ones the customer buys?",
+          "where": "process steps 1-2 and the what's-included list"
+        },
+        {
+          "fact": "Job details and locations for the four lighting photos",
+          "question": "For the kitchen, new-home exterior, garage and restaurant bar photos: what town was each in, and what did you install there? Can we name the restaurant?",
+          "where": "hero, expert section and recent-work strip captions (describe only what is visible)"
+        },
+        {
+          "fact": "Retrofit recessed lighting in finished ceilings",
+          "question": "Do you add recessed lighting to finished ceilings (fishing wire through existing cavities), or mainly at rough-in?",
+          "where": "expert section \"Finished ceilings too\" and process step 3"
+        }
+      ]
+    },
+    {
+      "path": "/services/new-construction-wiring/",
+      "useful_because": "This page walks someone planning a new house through where electrical work fits in the build: a six-phase rail from temporary power to final inspection (noting the Reedsburg Utility Commission application new developments may need, 608-768-1000), the four things hardest to add after drywall (EV circuit, generator inlet, recessed/soffit lights, garage and outdoor outlets), and a room-by-room table of the National Electrical Code points that shape the layout under Wisconsin's newly adopted 2023 NEC. It shows three of Dellona Electric's own new builds (home exterior lighting, a new kitchen, the truck and trailer on a sandy lot) and explains city versus town permitting. The homepage only lists new construction as one service.",
+      "needs_confirmation": [
+        {
+          "fact": "Price or pricing method for new construction wiring",
+          "question": "How do you price new construction wiring (per square foot, per opening, from plans)? Any range you are comfortable publishing?",
+          "where": "FAQ \"How much does it cost to wire a new house?\" (answered without numbers)"
+        },
+        {
+          "fact": "Whether temporary power is part of the job",
+          "question": "Do you set up temporary power (pole or pedestal) on new builds, and handle the utility application?",
+          "where": "phase rail step 1 \"Temporary power\""
+        },
+        {
+          "fact": "Who pulls permits and schedules rough and final inspections",
+          "question": "On new builds, do you pull the electrical permit and schedule the rough and final inspections, in the city and in surrounding towns?",
+          "where": "FAQ on permits and phase rail steps 3 and 6"
+        },
+        {
+          "fact": "A layout walk-through before rough-in",
+          "question": "Do you walk the house with the owner or builder to mark outlet, switch and fixture locations before rough-in? We list it as included.",
+          "where": "what's-included checklist"
+        },
+        {
+          "fact": "Whether Dellona works directly for owners, for builders, or both",
+          "question": "On new construction, do you work mainly for builders, directly for homeowners, or both? Can we name any builders?",
+          "where": "expert section (no builders named)"
+        },
+        {
+          "fact": "Job details for the new-build photos",
+          "question": "For the new home exterior, kitchen and lit garage photos: what town was each in and what did you wire there?",
+          "where": "recent-work strip captions and hero"
+        },
+        {
+          "fact": "Detached garages and outbuildings",
+          "question": "Do you wire detached garages, pole buildings and other outbuildings? The page says outbuildings (from the service list) but no farm buildings.",
+          "where": "hero answer and code table"
+        }
+      ]
+    },
+    {
+      "path": "/services/outlet-switch-repair/",
+      "useful_because": "This page tells a customer which outlet or switch they actually need: a six-type receptacle guide (standard, GFCI, AFCI/dual-function, tamper-resistant, USB, 20-amp) with where each is required, the 2008 NEC tamper-resistant fact, a standard vs dimmer vs smart switch table (neutral-wire requirement, LED compatibility, three-way), the warning signs that make a device urgent, and what a replacement includes under the 2023 NEC Wisconsin adopted in September 2026. It uses Dellona Electric's own photos, including the GFCI outlet beside a JuiceBox charger, and explains the permit difference between swapping a device and adding new outlets.",
+      "needs_confirmation": [
+        {
+          "fact": "Pricing for outlet/switch replacement (per device, minimum charge)",
+          "question": "How do you price outlet and switch work: per device, a minimum visit charge, or hourly? Any typical prices you'd publish (e.g. GFCI outlet installed)?",
+          "where": "FAQ \"How much does it cost to repair or replace an outlet or switch?\" (answered without numbers)"
+        },
+        {
+          "fact": "Smart switch brands installed",
+          "question": "Do you install smart switches and dimmers, and is there a brand you prefer (Lutron Caseta, Leviton, etc.)?",
+          "where": "switch comparison table and expert section"
+        },
+        {
+          "fact": "Permit treatment of like-for-like device replacement",
+          "question": "In Reedsburg and the towns you work in, is swapping an outlet or switch like-for-like done without a permit, while adding outlets/circuits needs one? Please confirm how you handle it.",
+          "where": "FAQ \"Do I need a permit to replace outlets or switches in Reedsburg?\""
+        }
+      ]
+    },
+    {
+      "path": "/services/",
+      "useful_because": "The hub is the only page that lists all 15 Dellona Electric services at once, grouped by the kind of job (repairs and safety, installs, new builds and businesses), and it maps eight everyday problems (a breaker that trips after reset, a warm outlet, a full panel, two-prong outlets in an older house, outages, a burning smell, a new build, a business fit-out) to the service page that covers each, plus a second page worth reading. A visitor who doesn't know the trade name for their problem can find the right page from the symptom.",
+      "needs_confirmation": [
+        {
+          "fact": "Whether every listed service is offered as described",
+          "question": "Please look over the 15 services on the Services page. Is there any you don't offer, or anything big missing (for example farm or agricultural work)?",
+          "where": "/services/ grids and the symptom table"
+        }
+      ]
+    },
+    {
+      "path": "/services/smart-home-wiring/",
+      "useful_because": "This page explains why smart devices fail for wiring reasons and how to tell before buying one: a drawn comparison of a switch box with a neutral versus a switch loop, the 2011 NEC neutral rule, LED ghosting on no-neutral switches, doorbell-transformer and thermostat C-wire problems, and a seven-row table of what each device (smart switch, dimmer, three-way setup, video doorbell, thermostat, wall-mounted TV, smart smoke/CO alarms) needs at the wall, its common snag and the usual fix, including why TV power cords can't be run inside the wall. It uses Dellona Electric's own TV-wall job with a recessed media box and lit niches as the example.",
+      "needs_confirmation": [
+        {
+          "fact": "Which smart-device brands or systems the company installs",
+          "question": "Are there smart switch, doorbell or thermostat brands you install most or prefer not to work with? (We named none.)",
+          "where": "device table and what's-included list"
+        },
+        {
+          "fact": "Whether app/hub setup and Wi-Fi pairing are part of the job",
+          "question": "Do you set up the apps and pair the devices, or does the job end at the wiring?",
+          "where": "what's-included answer (says the job ends ready to pair with its app)"
+        },
+        {
+          "fact": "Box-by-box survey as the first step",
+          "question": "Is checking each switch box for a neutral the first thing you do on a smart switch job? We describe it that way.",
+          "where": "neutral-check safety note and process step 2"
+        },
+        {
+          "fact": "Smart thermostat wiring (HVAC low-voltage)",
+          "question": "Do you run thermostat wire / add C-wires for smart thermostats, or should that be pointed to an HVAC contractor?",
+          "where": "signs bento, device table and checklist"
+        },
+        {
+          "fact": "Price range for smart switch and TV-wall wiring",
+          "question": "Any typical price you'd publish per smart switch swap, or for a recessed TV power/media box?",
+          "where": "FAQ \"How much does it cost to wire a house for smart switches?\" (answered without numbers)"
+        },
+        {
+          "fact": "Who pulls permits for new circuits on smart/TV-wall jobs",
+          "question": "When a smart home or TV-wall job adds circuits, do you pull the permit?",
+          "where": "FAQ \"Does smart home wiring need a permit in Reedsburg?\""
+        },
+        {
+          "fact": "Details of the TV-wall living-room job",
+          "question": "For the living-room photo, did you wire the recessed TV box, niche lights and smoke alarm? Were any smart switches or dimmers installed there?",
+          "where": "expert and proof sections"
+        }
+      ]
+    },
+    {
+      "path": "/services/smoke-detector-installation/",
+      "useful_because": "The page tells a Wisconsin homeowner exactly where alarms go, floor by floor (NFPA 72 smoke placement plus Wis. Stat. 101.647 CO rules, including the attached-garage trigger and the no-fuel exemption), how to tell an alarm is due (the 10-year date, end-of-life chirp, alarms that don't sound together), and how battery-only, sealed 10-year and hardwired interconnected alarms compare. It explains the interconnect-wire problem in older homes and the wireless-interconnect alternative, describes the four-step install and test, and shows a hardwired ceiling alarm in a finished living room from the client's photos.",
+      "needs_confirmation": [
+        {
+          "fact": "Price per alarm or typical whole-house alarm job",
+          "question": "Is there a price you're comfortable publishing per hardwired alarm, or for a typical whole-house smoke/CO replacement?",
+          "where": "FAQ \"How much does it cost to install hardwired smoke detectors?\" (answered without numbers)"
+        },
+        {
+          "fact": "Whether Dellona supplies alarms and which brands",
+          "question": "Do you supply the alarms, and which brands do you install (for matching existing interconnected sets)?",
+          "where": "process step 3"
+        },
+        {
+          "fact": "Whether Dellona fishes new interconnect cable in finished homes or prefers wireless-interconnect units",
+          "question": "In finished older homes, do you fish new 3-wire cable for interconnection, use wireless-interconnect hardwired alarms, or both?",
+          "where": "expert section \"Older homes without the third wire\""
+        },
+        {
+          "fact": "Who installed the smoke alarm in the living-room photo",
+          "question": "Did Dellona Electric wire the living room shown in the ceiling-fan photo (including the smoke alarm)? What town was it in?",
+          "where": "proof section (does not claim Dellona installed that alarm)"
+        }
+      ]
+    },
+    {
+      "path": "/services/surge-protection/",
+      "useful_because": "The page explains where surges come from (storms, power restoration, motors inside the house), shows the three layers of protection (Type 1 at the service, Type 2 at the panel, Type 3 at the outlet), and compares surge strips, a whole-house device and both together across hardwired equipment, electronics, and cable/phone lines. It explains NEC 230.67 and that Wisconsin's jump from the 2017 to the 2023 code in September 2026 now brings a surge device with every new or replaced home service, and it describes what a proper install includes (short leads, grounding check, visible status lights).",
+      "needs_confirmation": [
+        {
+          "fact": "Price range for a whole-house surge device installed",
+          "question": "Is there a price range you're comfortable publishing for a whole-house surge protector installed at the panel?",
+          "where": "FAQ \"How much does whole-house surge protection cost?\" (answered without numbers)"
+        },
+        {
+          "fact": "Device brands/types installed and any manufacturer warranty",
+          "question": "Which surge protective devices do you usually install, and do any carry a connected-equipment warranty you'd want mentioned?",
+          "where": "process step 2 (no brand or warranty named)"
+        },
+        {
+          "fact": "Whether Dellona fixes grounding as part of surge installs",
+          "question": "If a home's grounding is poor, do you correct it as part of a surge install? The page says it gets fixed as part of the job; please confirm.",
+          "where": "process step 1"
+        },
+        {
+          "fact": "Whether Dellona installs Type 1 devices at the meter",
+          "question": "Do you install Type 1 surge devices at the meter/service, or mainly Type 2 at the panel?",
+          "where": "layers-of-protection diagram"
+        }
+      ]
+    },
+    {
+      "path": "/services/wiring-rewiring/",
+      "useful_because": "This page helps an owner of an older Reedsburg-area house identify what is in their walls: a five-era wiring timeline (knob-and-tube before about 1940, cloth-sheathed cable 1940s-60s, aluminum branch circuits about 1965-73, modern grounded cable, and today's AFCI/GFCI circuits under the 2023 NEC Wisconsin adopted in September 2026), the code-allowed GFCI 'No Equipment Ground' stopgap for two-prong outlets, a table on spot repair vs partial vs whole-house rewiring, and how a rewire is done by fishing cable through basement and attic access. It shows Dellona Electric's own basement panel/cable work, a kitchen lighting job and a sunroom trim-out, and points to the City of Reedsburg Building Inspection Department for permits.",
+      "needs_confirmation": [
+        {
+          "fact": "Price range for partial and whole-house rewiring",
+          "question": "Is there a price range you'd publish for rewiring (per room or for a typical whole house)?",
+          "where": "FAQ \"How much does it cost to rewire a house?\" (answered without numbers)"
+        },
+        {
+          "fact": "Who pulls permits and schedules inspections on rewiring jobs",
+          "question": "On a rewire, do you pull the electrical permit and schedule inspections, in the City of Reedsburg and the surrounding towns?",
+          "where": "FAQ \"Does rewiring need a permit and inspection in Reedsburg?\""
+        },
+        {
+          "fact": "Wall patching after rewiring",
+          "question": "When cable is fished through finished walls, who patches and paints the access holes: you, the homeowner, or a drywall sub you work with?",
+          "where": "\"What does rewiring an older house involve?\" (patching not mentioned)"
+        },
+        {
+          "fact": "Whether families can stay in the house during a rewire, and typical job length",
+          "question": "Can people usually live in the house during a rewire, and how long does a typical whole-house rewire take?",
+          "where": "process step 2 \"Plan circuits and order\" (no duration stated)"
+        },
+        {
+          "fact": "Knob-and-tube and aluminum wiring experience",
+          "question": "Do you regularly replace knob-and-tube and repair aluminum branch wiring (e.g. with AlumiConn/COPALUM connectors)? We describe both as work the page covers.",
+          "where": "era timeline and comparison table"
+        }
       ]
     }
   ],
