@@ -1,0 +1,344 @@
+{
+  "seo": {
+    "serp_context": null,
+    "target_radius": 25,
+    "primary_keyword": "Electrical repair services",
+    "secondary_keywords": [
+      "Electrical wiring repair",
+      "Circuit breaker repair",
+      "Electrical panel repair",
+      "Outlet repair",
+      "Light switch repair",
+      "Ceiling fan installation",
+      "Lighting installation",
+      "Faulty wiring repair",
+      "Electrical troubleshooting",
+      "Power outage repair",
+      "Short circuit repair",
+      "Electrician",
+      "Professional electrician",
+      "Licensed electrician",
+      "Local electrician",
+      "Residential electrician",
+      "Commercial electrician",
+      "Industrial electrician",
+      "Electrical contractor",
+      "Electrical services",
+      "Electric repair services",
+      "Emergency electrician",
+      "Certified electrician",
+      "Hire an electrician",
+      "Electrician service near me",
+      "Emergency electrical repair",
+      "Same-day electrician",
+      "Affordable electrical services",
+      "Electrical contractor near me",
+      "Book an electrician",
+      "Electrical panel upgrade",
+      "Home rewiring service",
+      "Commercial electrical repair",
+      "Licensed electrical company",
+      "24/7 emergency electrical services",
+      "EV charger installation",
+      "Generator installation",
+      "Home electrical inspection",
+      "Whole-house surge protection",
+      "Indoor lighting installation",
+      "Outdoor lighting installation",
+      "Smart home wiring",
+      "Security lighting installation",
+      "New construction electrical wiring",
+      "Electrical maintenance services",
+      "Smoke detector installation"
+    ]
+  },
+  "tier": "premium",
+  "email": "dellonaelectric@outlook.com",
+  "pages": [],
+  "phone": "(608) 477-8453",
+  "assets": {
+    "logo": {
+      "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/logo/1792698888819-xfylkb-67430236_1989636651136909_3508888332648054784_n.png",
+      "storage_path": "dellona-electric/logo/1792698888819-xfylkb-67430236_1989636651136909_3508888332648054784_n.png"
+    },
+    "images": [
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/logo/1792698888819-xfylkb-67430236_1989636651136909_3508888332648054784_n.png",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "logo",
+        "storage_path": "dellona-electric/logo/1792698888819-xfylkb-67430236_1989636651136909_3508888332648054784_n.png",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698888847-5wge4m-132481388_3136127953154434_3771732944415075548_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698888847-5wge4m-132481388_3136127953154434_3771732944415075548_n.jpg",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698889909-qdxrkz-469825574_8219515388148973_2573271937096661664_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698889909-qdxrkz-469825574_8219515388148973_2573271937096661664_n.jpg",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698890364-orl4my-473817321_8406197076147469_2482077332555432508_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698890364-orl4my-473817321_8406197076147469_2482077332555432508_n.jpg",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698890904-f1jfd6-474778346_8460815187352324_7940431319475147933_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698890904-f1jfd6-474778346_8460815187352324_7940431319475147933_n.jpg",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698891554-ic1qyr-481024462_1304951154483482_1574823822420824704_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698891554-ic1qyr-481024462_1304951154483482_1574823822420824704_n.jpg",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698891948-6wan0s-486619178_1333921951586402_4388507090531988395_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698891948-6wan0s-486619178_1333921951586402_4388507090531988395_n.jpg",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698892389-g8fvlv-491915511_1351543176490946_5795135899047591208_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698892389-g8fvlv-491915511_1351543176490946_5795135899047591208_n.jpg",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698892869-us1j9r-492410086_1359640165681247_746697224363828697_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698892869-us1j9r-492410086_1359640165681247_746697224363828697_n.jpg",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698893248-virhle-530928934_1453841109594485_5466141823603666410_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698893248-virhle-530928934_1453841109594485_5466141823603666410_n.jpg",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698893765-y4hnmh-802899703_1816635269981732_5463098500345897016_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698893765-y4hnmh-802899703_1816635269981732_5463098500345897016_n.jpg",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/photos/1792698894210-nm4jve-833334016_1840354997609759_1198293457304092510_n.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "other",
+        "storage_path": "dellona-electric/photos/1792698894210-nm4jve-833334016_1840354997609759_1198293457304092510_n.jpg",
+        "quality_score": null
+      }
+    ],
+    "page_allocations": null,
+    "recommended_hero_image": {
+      "alt": "",
+      "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dellona-electric/logo/1792698888819-xfylkb-67430236_1989636651136909_3508888332648054784_n.png",
+      "context": "logo",
+      "quality_score": null
+    }
+  },
+  "design": {
+    "fonts": {},
+    "notes": "",
+    "style": "modern",
+    "colors": {
+      "extracted_from_logo": true
+    },
+    "logo_analysis": {}
+  },
+  "domain": "dellona-electric",
+  "phases": [
+    {
+      "name": "scaffold",
+      "phase": 1,
+      "status": "pending"
+    },
+    {
+      "name": "nav_footer_head",
+      "phase": 2,
+      "status": "pending"
+    },
+    {
+      "name": "homepage",
+      "phase": 3,
+      "status": "pending"
+    },
+    {
+      "name": "inner_pages",
+      "phase": 4,
+      "status": "pending"
+    },
+    {
+      "name": "seo_aeo_deploy",
+      "phase": 5,
+      "status": "pending"
+    }
+  ],
+  "address": {
+    "zip": "53959",
+    "city": "Reedsburg",
+    "state": "WI",
+    "street": "E8981 Briar Bluff Rd"
+  },
+  "content": {
+    "usps": [],
+    "years": 8,
+    "insurance": "",
+    "description": "Dellona Electric is a local business serving reedsburg, WI and the surrounding area, in business since 2018. Services include Electrical repair services, Electrical wiring repair, Circuit breaker repair and Electrical panel repair. Contact Dellona Electric at (608) 477-8453 for availability and pricing.",
+    "certifications": []
+  },
+  "reviews": [],
+  "tagline": "",
+  "industry": "Electrician",
+  "services": [],
+  "owner_name": "Edward Giannoni",
+  "client_slug": "dellona-electric",
+  "form_action": "https://db.pageone.cloud/functions/v1/leads/dellona-electric",
+  "github_repo": "",
+  "web_sources": [
+    "https://maps.google.com/?cid=1224938247813222499&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  ],
+  "company_name": "Dellona Electric",
+  "integrations": {
+    "geo": null,
+    "bbb_url": null,
+    "booking": {
+      "days": [],
+      "windows": [],
+      "authorized": false
+    },
+    "spanish": false,
+    "financing": null,
+    "photo_day": null,
+    "accepts_sms": false,
+    "gbp_place_id": "ChIJvUznawxFB4gRY1CyrNja_xA",
+    "estimate_tool": {
+      "pricing": [],
+      "authorized": false
+    },
+    "gbp_map_embed": null,
+    "directions_url": "https://www.google.com/maps/dir/?api=1&destination=place_id:ChIJvUznawxFB4gRY1CyrNja_xA",
+    "elfsight_embed": null,
+    "financing_note": null,
+    "scheduling_url": null,
+    "text_us_number": null,
+    "review_request_url": "https://search.google.com/local/writereview?placeid=ChIJvUznawxFB4gRY1CyrNja_xA",
+    "certification_links": []
+  },
+  "service_areas": [
+    "reedsburg"
+  ],
+  "address_public": true,
+  "business_hours": "",
+  "image_curation": null,
+  "research_brief": {
+    "gbp": null,
+    "brief": {
+      "faqs": [
+        {
+          "a": "Yes. Dellona Electric serves Reedsburg and nearby communities in Sauk County. [Confirm the exact service radius and list specific towns before publishing.]",
+          "q": "Do you serve Reedsburg and the surrounding area?"
+        },
+        {
+          "a": "Yes. Dellona Electric holds a Wisconsin electrical contractor license and carries liability insurance and workers' compensation coverage. [Insert license number and verify current status with the Wisconsin Department of Safety and Professional Services.]",
+          "q": "Are you licensed and insured?"
+        },
+        {
+          "a": "[Confirm availability.] If offered, explain the response window, any after-hours surcharge, and how to request urgent help, such as calling the main number directly.",
+          "q": "Do you offer emergency or after-hours electrical service?"
+        },
+        {
+          "a": "Explain the pricing approach in plain terms: whether estimates are free, whether service calls use a flat or hourly rate, and what a typical job like a panel check or outlet repair costs. Avoid quoting exact prices until verified.",
+          "q": "How much does an electrical service call or estimate cost?"
+        },
+        {
+          "a": "Many electrical projects, including panel upgrades, new circuits, and service changes, require a permit and inspection under Wisconsin's electrical code. Dellona Electric handles permitting and inspection coordination on applicable jobs. [Confirm the local permitting process with the City of Reedsburg or Sauk County building department.]",
+          "q": "Do electrical repairs and upgrades require a permit in Reedsburg?"
+        }
+      ],
+      "about_angle": "Position Dellona Electric as a local, licensed family-or-owner-operated business that treats each Reedsburg customer's home or building as its own. Cover the owner's background and training, the company's commitment to safe, permitted work, and its ties to the community. Replace placeholders with verified facts such as founding year, license details, and team size.",
+      "hero_headline": "Reliable Electrical Service in Reedsburg, WI",
+      "differentiators": [
+        "NOTE: No competitor, Google Business Profile, or existing-site data was provided, so these are category-level suggestions to verify against Dellona Electric's actual services, credentials, and history before publishing.",
+        "Local presence in Reedsburg and Sauk County: frame the business as the neighborhood electrician who knows local housing stock, older wiring, and rural service needs, rather than a generic regional contractor.",
+        "Licensing and insurance: state the Wisconsin electrical contractor license number and bonding/insurance status prominently, since homeowners and commercial clients often check these first.",
+        "Clear response and availability: if the company offers same-day or after-hours service, make that the headline differentiator, since emergency electrical calls are the highest-intent searches.",
+        "Transparent quoting: publish how estimates work (free estimates, flat-rate or hourly, what is included) to differentiate in a category where pricing is often opaque.",
+        "Safety-first messaging: lead with code-compliant, permitted work and inspection handling, which reassures homeowners and property managers.",
+        "Range of services: show residential, light commercial, farm/agricultural, and service-upgrade work (panels, EV chargers, generators) on distinct pages so each audience finds its match.",
+        "Reviews and proof: once real customer reviews and project photos are collected, use them as the strongest trust signals; do not publish any that are not verified."
+      ],
+      "hero_subheadline": "Licensed local electricians for home repairs, upgrades, and emergency calls across Reedsburg and Sauk County. Clear pricing, code-compliant work, and fast response.",
+      "tone_recommendation": "Professional and approachable: authoritative enough to reassure homeowners and property managers about safety, licensing, and code compliance, but friendly and plain-spoken in everyday language. Avoid jargon where a simple term works, and keep the voice local and direct. Adjust toward more formal language for commercial and agricultural pages."
+    },
+    "competitors": [],
+    "generated_at": "2026-10-22T19:55:19.603Z",
+    "existing_site": null
+  },
+  "competitor_urls": [],
+  "phone_secondary": "",
+  "service_grouping": {
+    "cap": 16,
+    "tier": "premium",
+    "groups": [],
+    "grouped_count": 0,
+    "original_count": 0
+  },
+  "lead_notification_email": "dellonaelectric@outlook.com",
+  "lead_notification_phone": "(608) 477-8453",
+  "google_business_profile_url": "https://maps.google.com/?cid=1224938247813222499&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+}
